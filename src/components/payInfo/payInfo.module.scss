@@ -1,0 +1,40 @@
+.payInfo {
+  &_wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &_succes {
+    fill: #36b86b;
+    color: #36b86b;
+  }
+  &_error {
+    fill: var(--error);
+    color: var(--error);
+  }
+  &_icon {
+    margin-bottom: 65px;
+  }
+  &_title {
+    font-weight: 800;
+    font-size: 36px;
+
+    margin-bottom: 28px;
+  }
+  &_desc {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--Body-Text-Regular);
+    margin-bottom: 10%;
+  }
+  &_btn {
+    width: 100%;
+  }
+  &_btnBack {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

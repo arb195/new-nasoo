@@ -1,0 +1,66 @@
+.meetForm {
+  border: 1px solid var(--Border-Text-Feild-B);
+  border-radius: var(--border-radius);
+  margin-bottom: 23px;
+  &_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 23px;
+    border-bottom: 1px solid var(--Border-Text-Feild-B);
+  }
+  &_headTitle {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--Key-Primary-Container);
+  }
+  &_radioWrraper {
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    list-style: none;
+    margin-bottom: 30px;
+  }
+  &_radioItem {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  &_radioInput {
+    height: auto;
+    input {
+      height: auto;
+    }
+  }
+  &_formWrraper {
+    padding: 22px 23px;
+  }
+  &_form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+  &_formTitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--Key-Primary-Container);
+  }
+  &_formTxt {
+    border: 1px solid var(--Border-Dark);
+    border-radius: var(--border-radius);
+    padding: 31px 22px;
+    font-size: 14px;
+    font-weight: 400;
+    &::placeholder {
+      color: var(--Body-Text-Regular);
+    }
+  }
+  &_btnSubmit {
+    margin-right: auto;
+    padding: 10px 40px;
+  }
+}

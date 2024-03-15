@@ -1,0 +1,60 @@
+.sendCodeForm {
+  &_form {
+    width: 100%;
+  }
+  &_input {
+    margin-bottom: auto;
+  }
+  &_userName {
+    margin-bottom: 16px;
+  }
+  &_submit {
+    display: flex;
+    width: 100%;
+    font-family: var(--font-family);
+    color: #fff;
+    opacity: 1;
+    justify-content: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 28px;
+    margin-bottom: 9px;
+    padding: 14px 0;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &_disableBtn {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  &_otpSend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--Body-Text-Regular, #7c818f);
+    svg circle {
+      stroke-dasharray: 113px;
+      stroke-dashoffset: 0px;
+      stroke-linecap: round;
+      stroke-width: 2px;
+      stroke: #0c0d0e;
+      fill: none;
+      animation: countdown 20s linear infinite forwards;
+    }
+  }
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}

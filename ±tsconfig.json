@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/root/*": ["./*"],
+      "@/components/*": ["src/components/*"],
+      "@/public/*": ["public/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/context/*": ["src/context/*"],
+      "@/api/*": ["src/api/*"],
+      "@/hook/*": ["src/hook/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/img/*": ["public/assets/img/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  },
+  "include": ["/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,32 @@
+.accountInfo {
+  margin-bottom: 10%;
+  &_phone {
+    display: flex;
+    align-items: center;
+  }
+  &_phoneInput {
+    flex: 1 0 80%;
+    input {
+      border-radius: 0 var(--XS, 8px) var(--XS, 8px) 0;
+    }
+  }
+  &_phoneSelect {
+    border-radius: 0;
+    :global {
+      .MuiOutlinedInput-root {
+        border-radius: var(--XS, 8px) 0 0 var(--XS, 8px);
+        margin: 0;
+      }
+    }
+  }
+  &_valid {
+    input {
+      border: 1px solid green !important;
+    }
+    :global {
+      .MuiOutlinedInput-root {
+        border: 1px solid green !important;
+      }
+    }
+  }
+}

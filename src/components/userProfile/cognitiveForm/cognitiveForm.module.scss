@@ -1,0 +1,21 @@
+.cognitiveForm {
+  margin-bottom: 20px;
+  &_contentWrraper {
+    padding: 28px 12px 0;
+    background-color: var(--Border-Regular);
+  }
+  &_alertTxt {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    color: var(--Key-Primary-Container);
+    fill: var(--Key-Primary-Container);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 58px;
+  }
+  &_range {
+    accent-color: var(--Border-Text-Feild-B);
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../../styles/respond.scss';
+
+.profHeader {
+  &_posterWrapper {
+    position: relative;
+    z-index: 0;
+  }
+  &_poster {
+    height: 350px;
+    max-height: 350px;
+    z-index: 0;
+    @include respond-to('md') {
+      max-height: 150px;
+    }
+  }
+  &_posterIcon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 21px;
+    right: 78px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(239, 247, 254, 0.7);
+    z-index: 10;
+    cursor: pointer;
+  }
+  &_profContainer {
+    margin-top: -202px;
+    @include respond-to('md') {
+      margin-top: -62px;
+    }
+  }
+  &_profWrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+  &_profImg {
+    max-width: 325px;
+    max-height: 325px;
+    border-radius: 50%;
+    box-shadow: 0px 4.693140506744385px 4.693140506744385px 0px #00000040;
+    background-color: #eaf0f6;
+    fill: var(--Border-Dark);
+    z-index: 10;
+  }
+  &_name {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+    color: var(--Key-Primary-Container);
+    z-index: 10;
+  }
+  &_changProf {
+    display: flex;
+    align-items: center;
+    color: var(--Body-Text-Regular);
+    fill: var(--Body-Text-Regular);
+    margin-bottom: 48px;
+    gap: 10px;
+    font-size: 11px;
+    line-height: 18px;
+    font-weight: 400;
+    @include respond-to('md') {
+      margin-bottom: 0;
+    }
+  }
+}

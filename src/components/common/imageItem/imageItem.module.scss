@@ -1,0 +1,10 @@
+.img {
+  position: relative;
+  z-index: 10;
+  flex-direction: column;
+  transition: 0.3s;
+  display: flex;
+  img {
+    transition: 0.3s;
+  }
+}

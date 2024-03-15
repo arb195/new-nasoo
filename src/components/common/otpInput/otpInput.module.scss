@@ -1,0 +1,14 @@
+.otpInput {
+  &_otpMain {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  &_otpCode {
+    flex: 1 0 auto;
+  }
+  &_otpBtn {
+    margin-top: 47px;
+  }
+}

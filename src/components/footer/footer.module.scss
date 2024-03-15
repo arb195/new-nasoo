@@ -1,0 +1,17 @@
+@import '../../styles/respond.scss';
+.footer {
+  &_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--BackGround-Text-Fields);
+    padding: 10px 0 8px;
+  }
+  &_iconActive {
+    display: flex;
+    padding: 10px;
+    fill: var(--Key-Primary-Primary);
+    background-color: var(--Border-Text-Feild-B);
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../styles/respond.scss';
+
+.siteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px rgba(77, 137, 210, 0.24);
+  background-color: #4683b6;
+  color: #eff7fe;
+  fill: #eff7fe;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 49px;
+    @include respond-to('md') {
+      justify-content: center;
+      gap: 10px;
+    }
+    @include respond-to('xxxs') {
+      flex-direction: column;
+    }
+  }
+  &_items {
+    display: flex;
+  }
+  &_item {
+    padding: 18px 15px 16px;
+    @include respond-to('md') {
+      padding: 9px 7px 8px;
+    }
+  }
+  &_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    margin: 20px 0 0;
+  }
+}

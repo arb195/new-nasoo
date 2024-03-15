@@ -1,0 +1,31 @@
+.sortable {
+  &_title {
+    color: var(--Body-Text-Dark);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+    span {
+      font-size: 18px;
+      opacity: 0.8;
+    }
+  }
+  &_itemWrraper {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: 2px solid var(--Border-Dark);
+    color: var(--Body-Text-Regular);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    border-radius: var(--border-radius);
+    padding: 18px 14px;
+  }
+}

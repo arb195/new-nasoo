@@ -1,0 +1,234 @@
+@import '../../styles/respond.scss';
+
+.login {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 666px;
+  margin: auto;
+  height: 100vh;
+
+  &_wrapper {
+    background-color: #fff;
+    // box-shadow: var(--main-shadow);
+    // border-radius: var(--border-radius);
+    overflow: hidden;
+    padding: 30px;
+    padding-top: 55px;
+    width: 100%;
+    @include respond-to('xs') {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  :global {
+    .MuiTabs-root {
+      margin-bottom: 21px;
+      box-shadow: 0 0 65px 0 rgba(0, 0, 0, 0.07);
+      border-radius: var(--border-radius) !important;
+      padding: 3px;
+    }
+    .MuiTabs-flexContainer {
+      background-color: #ffffff;
+      justify-content: center;
+      border-radius: var(--border-radius);
+      .MuiButtonBase-root {
+        flex-grow: 1;
+        padding-bottom: 0px;
+        border-radius: var(--border-radius);
+        font-size: 14px;
+        color: #98a1ab;
+      }
+      .MuiTabs-indicator {
+        display: none;
+      }
+      .Mui-selected {
+        background-color: #ec2739;
+      }
+    }
+  }
+
+  &_form {
+    position: relative;
+    max-height: 400px;
+    width: 100%;
+    margin-bottom: 80px;
+    :global {
+      .MuiLoadingButton-root {
+        height: 46px;
+        background-color: #13d276;
+        font-size: 17px;
+        font-weight: 600;
+        border-radius: var(--border-radius);
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #cbcdd2;
+    }
+  }
+
+  &_logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  &_submit {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    opacity: 1;
+    justify-content: center;
+    font-size: 19px;
+    margin-top: 28px;
+    margin-bottom: 9px;
+    padding: 14px 0;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &_disableBtn {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  &_saveBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #7c818f;
+    margin-bottom: 24px;
+  }
+  &_signup {
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding: 14px;
+    text-align: center;
+    color: var(--btn-primary);
+    border-radius: 8px;
+    border: 1px solid var(--btn-primary);
+    transition: 0.3s;
+    &:hover {
+      color: var(--white);
+      background-color: var(--btn-primary);
+    }
+  }
+  &_input {
+    margin-bottom: 16px;
+  }
+  &_inputwrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  &_forgetPass {
+    margin-right: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--Body-Text-Dark, #3e4148);
+    @include respond-to('xs') {
+      display: block;
+      text-align: left;
+      position: relative;
+      bottom: initial;
+      left: initial;
+    }
+  }
+  &_inputEmail {
+    input {
+      letter-spacing: 0;
+    }
+  }
+  &_inputCheckbox {
+    margin-bottom: 0;
+    span {
+      margin: 0;
+    }
+    input {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &_title {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  &_subTitle {
+    font-size: 16px;
+    color: #084298;
+    margin-bottom: 18px;
+    font-weight: 600;
+    background-color: #cfe2ff;
+    padding: 12px 10px;
+    border-radius: 5px;
+  }
+  &__modal {
+    height: initial;
+    width: 460px;
+    margin: 0;
+    @include respond-to('xs') {
+      width: 100%;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    #{$self}_form {
+      border: none;
+    }
+  }
+  &_forgotPass {
+    background-color: #ecf6ff;
+    color: #7b99b4;
+    padding: 10px 18px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 21px;
+    max-width: 200px;
+    border-radius: var(--border-radius);
+    opacity: 1;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &_goToHome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 0 auto;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: var(--border-radius);
+    color: #7b99b4;
+    fill: #ecf6ff;
+    transition: 0.3s;
+    svg {
+      background-color: #7b99b4;
+      padding: 5px;
+      border-radius: var(--border-radius);
+    }
+    &:hover {
+      gap: 5px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.errorBoundary {
+  display: flex;
+  justify-content: center;
+  &_wrapper {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px 25px;
+    margin: 15px auto;
+    box-shadow: 0 0px 10px -3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    ul {
+      padding-right: 10px;
+      margin-bottom: 30px;
+      li {
+        font-size: 16px;
+        margin-bottom: 6px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &_wrapperTitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  &_wrapperDesc {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #707070;
+  }
+  &_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_btnsHome {
+    background-color: #e92638;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  &_btnsReload {
+    background-color: #4d4d4d;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+}

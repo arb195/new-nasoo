@@ -1,0 +1,74 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "paths": {
+      "@/root/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/public/*": [
+        "public/*"
+      ],
+      "@/constants/*": [
+        "src/constants/*"
+      ],
+      "@/context/*": [
+        "src/context/*"
+      ],
+      "@/api/*": [
+        "src/api/*"
+      ],
+      "@/hook/*": [
+        "src/hook/*"
+      ],
+      "@/styles/*": [
+        "src/styles/*"
+      ],
+      "@/img/*": [
+        "public/assets/img/*"
+      ],
+      "@/icons/*": [
+        "public/icons/*"
+      ],
+      "@env": [
+        "./env.js"
+      ]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/app/my-account/layout.jsx",
+    "./build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

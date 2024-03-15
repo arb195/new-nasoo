@@ -1,0 +1,10 @@
+.inputSkeleton {
+  &_content {
+    margin-bottom: 10px;
+    :global {
+      .MuiSkeleton-root {
+        transform: scale(1, 1) !important;
+      }
+    }
+  }
+}

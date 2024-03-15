@@ -1,0 +1,44 @@
+@import '../../styles/respond.scss';
+.notfound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 96%;
+  height: calc(100vh - 16vh);
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .notfound_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include respond-to('lg') {
+      flex-direction: column;
+    }
+    .notfound_text {
+      padding: 50px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      .texts {
+        h1 {
+          font-size: 80px;
+          font-weight: 800;
+        }
+        h2 {
+          font-size: 42px;
+          font-weight: 500;
+        }
+        p {
+          padding: 10px 0;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

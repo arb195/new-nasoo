@@ -1,0 +1,102 @@
+@import '../../../styles/respond.scss';
+
+.dashboard {
+  width: 100%;
+  &_quickAccess {
+    display: flex;
+    align-items: center;
+    margin: 0 -7.5px;
+    @include respond-to('xs') {
+      flex-direction: column;
+    }
+  }
+
+  &_quickAccessItem {
+    box-shadow: -2px 6px 24px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    flex: 1;
+    margin: 0 7.5px;
+
+    @include respond-to('lg') {
+      margin: 0 4.5px;
+    }
+    @include respond-to('md') {
+      padding: 10px 5px;
+      margin: 0 1.5px;
+    }
+    @include respond-to('sm') {
+      padding: 10px 8px;
+      width: 100%;
+      margin-bottom: 10px;
+      margin: 0 1.5px;
+    }
+    @include respond-to('xs') {
+      padding: 10px 15px;
+      margin: 0 7.5px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &_quickAccessTitle {
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 20px;
+      width: 22px;
+      margin-left: 5px;
+      text-align: center;
+      @include respond-to('md') {
+        margin-left: 3px;
+      }
+    }
+    @include respond-to('md') {
+      font-size: 15px;
+    }
+    @include respond-to('sm') {
+      font-size: 15px;
+    }
+    @include respond-to('xs') {
+      font-size: 20px;
+    }
+  }
+
+  &_quickAccessCount {
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    top: 18px;
+    @include respond-to('md') {
+      font-size: 16px;
+    }
+    @include respond-to('sm') {
+      font-size: 15px;
+    }
+
+    @include respond-to('xs') {
+      font-size: 22px;
+    }
+  }
+
+  &_quickAccessShow {
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    @include respond-to('sm') {
+      font-size: 13px;
+    }
+
+    @include respond-to('xs') {
+      font-size: 15px;
+    }
+  }
+}

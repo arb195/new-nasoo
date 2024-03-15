@@ -1,0 +1,43 @@
+.btnLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 14px;
+  text-align: center;
+  &_outline {
+    color: var(--btn-primary);
+    fill: var(--btn-primary);
+    border-radius: 8px;
+    border: 1px solid var(--btn-primary);
+    transition: 0.3s;
+    &:hover {
+      color: var(--white);
+      fill: var(--white);
+      background-color: var(--btn-primary);
+    }
+  }
+  &_normal {
+    color: var(--white);
+    fill: var(--white);
+    background-color: var(--btn-primary);
+    border-radius: 8px;
+    border: 1px solid var(--btn-primary);
+    transition: 0.3s;
+    &:hover {
+      color: var(--btn-primary);
+      fill: var(--btn-primary);
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}
+.small {
+  width: 100%;
+  padding: 8px 16px;
+  font-size: 14px;
+  max-width: 155px;
+}

@@ -1,0 +1,80 @@
+.buyTime {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  $self: &;
+  &_title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--Key-Primary-Container);
+  }
+  &_radioWrraper {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 7px;
+    margin-bottom: 15px;
+  }
+  &_radioItem {
+    position: relative;
+    padding: 20px 18px;
+    input {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 20px;
+      width: 20px;
+      z-index: 2;
+    }
+    input:checked + label {
+      background-color: var(--BackGround-Text-Fields);
+      border: 1px solid var(--Border-Text-Feild-B);
+      box-shadow: var(--main-shadow);
+      color: var(--Key-Primary-Container);
+    }
+  }
+  &_radioLabel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--Body-Text-Regular);
+    border: 1px solid var(--Border-Dark);
+    border-radius: var(--border-radius);
+    box-shadow: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 55px;
+    z-index: 0;
+    &:hover {
+      border: 1px solid var(--Border-Text-Feild-B);
+      box-shadow: var(--main-shadow);
+    }
+    &:checked {
+      background: #000;
+    }
+  }
+  &_radiodesc {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--Body-Text-Regular);
+    margin-bottom: 37px;
+  }
+  &_btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_btn {
+    padding: 10px 50px !important;
+  }
+}

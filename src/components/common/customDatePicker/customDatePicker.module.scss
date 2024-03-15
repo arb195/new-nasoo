@@ -1,0 +1,38 @@
+.datePicker {
+  &_lable {
+    display: block;
+    margin-bottom: 9px;
+  }
+  &_date {
+    position: relative;
+    input {
+      height: 60px;
+      max-height: 60px;
+      width: 100%;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 32px;
+      padding: 14px;
+      margin-bottom: 2px;
+      border-radius: var(--XS, 8px);
+      border: 1px solid var(--Border-Dark, #cbcdd2);
+      background: var(--white);
+      cursor: pointer;
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translate(0, -50%);
+      pointer-events: none;
+    }
+  }
+  &_fieldHasVal {
+    input {
+      border-radius: var(--XS, 8px);
+      border: 2px solid var(--Border-Text-Feild-B, #bedffa);
+      background: var(--BackGround-Text-Fields, #eff7fe);
+    }
+  }
+}

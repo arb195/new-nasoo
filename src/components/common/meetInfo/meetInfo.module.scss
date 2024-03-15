@@ -1,0 +1,32 @@
+.meetInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff5e4;
+  border: 3px solid #fee5b4;
+  border-radius: var(--border-radius);
+  box-shadow: var(--main-shadow);
+  padding: 20px 20px;
+  margin-bottom: 30px;
+  &_img {
+    flex: 0 0 auto;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    gap: 28px;
+    list-style: none;
+  }
+  &_contentItem {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  &_btns {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    flex: 1 0 auto;
+  }
+}

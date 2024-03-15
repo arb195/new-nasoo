@@ -1,0 +1,69 @@
+@import '../../../styles/respond.scss';
+
+.profileLayout {
+  display: flex;
+  @include respond-to('sm') {
+    flex-direction: column;
+  }
+  &_user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 5px;
+    padding-bottom: 10px;
+  }
+  &_userInfo {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  &_list {
+    list-style: none;
+    background-color: #fff;
+    // box-shadow: -3px 5px 30px -12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 2px #e6ecf3;
+    padding: 15px 10px;
+    border-radius: var(--border-radius);
+    margin-left: 30px;
+    min-width: 240px;
+    align-self: flex-start;
+    @include respond-to('md') {
+      min-width: 205px;
+      margin-left: 7px;
+    }
+    @include respond-to('sm') {
+      margin-left: 0;
+      margin-left: 15px;
+      margin-bottom: 15px;
+      min-width: initial;
+      width: 100%;
+    }
+    li {
+      font-size: 18px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 14px;
+      color: #414141;
+      fill: #414141;
+      @include respond-to('md') {
+        font-size: 16px;
+      }
+      span {
+        padding: 0 5px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        // justify-content: space-between;
+        svg {
+          margin-top: -3px;
+          margin-left: 10px;
+        }
+      }
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

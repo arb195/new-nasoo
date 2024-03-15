@@ -1,0 +1,14 @@
+{
+  "editor.fontFamily": "'cascadia code'",
+  "files.autoSave": "afterDelay",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.tabCompletion": "on",
+  "diffEditor.codeLens": true,
+  "cSpell.words": ["nasoo"],
+  "editor.inlineSuggest.showToolbar": "onHover"
+}

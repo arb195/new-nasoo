@@ -1,0 +1,129 @@
+{
+  "android_package_name": "com.markazahan.android",
+  "name": "مرکز آهن",
+  "background_color": "#fff",
+  "description": "مرکز آهن خرید و فروش کلیه مقاطع فولادی خرد و کل",
+  "dir": "rtl",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "/icons/android-chrome-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/icons/android-chrome-512x512.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "192x192",
+      "src": "/icons/android-chrome-maskable-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/icons/android-chrome-maskable-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "lang": "fa",
+  "launch_handler": {
+    "navigate_existing_client": "never",
+    "route_to": "existing-client"
+  },
+  "name": "مرکز آهن",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "id": "com.markazahan.android",
+      "platform": "chromeos_play",
+      "url": "https://play.google.com/…s?id=com.markazahan.android"
+    }
+  ],
+  "screenshots": [
+    {
+      "sizes": "576x1150",
+      "src": "/screenshots/1.jpg",
+      "type": "image/jpeg"
+    },
+    {
+      "sizes": "576x1158",
+      "src": "/screenshots/2.jpg",
+      "type": "image/jpeg"
+    }
+  ],
+  "short_name": "مرکز آهن",
+  "shortcuts": [
+    {
+      "description": "صفحه درخواست مشاوره رایگان",
+      "icons": [
+        {
+          "purpose": "any",
+          "sizes": "96x96",
+          "src": "/icons/beam.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "درخواست مشاوره",
+      "url": "/consulting"
+    },
+    {
+      "description": "خرید میلگرد",
+      "icons": [
+        {
+          "purpose": "any",
+          "sizes": "96x96",
+          "src": "/icons/beam.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "میلگرد",
+      "url": "/product-category/میلگرد"
+    },
+    {
+      "description": "خرید تیرآهن",
+      "icons": [
+        {
+          "purpose": "any",
+          "sizes": "96x96",
+          "src": "/icons/beam.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "تیرآهن",
+      "url": "/product-category/تیرآهن"
+    },
+    {
+      "description": "خرید ورق",
+      "icons": [
+        {
+          "purpose": "any",
+          "sizes": "96x96",
+          "src": "/icons/beam.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "ورق",
+      "url": "/product-category/ورق/"
+    },
+    {
+      "description": "خرید پروفیل",
+      "icons": [
+        {
+          "purpose": "any",
+          "sizes": "96x96",
+          "src": "/icons/beam.png",
+          "type": "image/png"
+        }
+      ],
+      "name": "پروفیل",
+      "url": "product-category/قوطی-پروفیل/"
+    }
+  ],
+  "start_url": "/",
+  "theme_color": "#eb293d"
+}

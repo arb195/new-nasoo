@@ -1,0 +1,60 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 666px;
+  margin: auto;
+  height: 100vh;
+  &_logo {
+    margin-bottom: 49px;
+  }
+  &_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+  &_titlePage {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+    color: var(--Body-Text-Darkest, #0c0d0e);
+  }
+  &_backLink {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--Body-Text-Regular, #7c818f);
+  }
+  &_form {
+    width: 100%;
+  }
+  &_input {
+    margin-bottom: 9px;
+  }
+  &_selectWapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10%;
+  }
+  & {
+    flex: 1 0 50%;
+  }
+  &_datePicker {
+    flex: 1 0 50%;
+  }
+  &_continubtn {
+    padding: 10px 40px;
+  }
+  &_btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

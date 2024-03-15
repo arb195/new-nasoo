@@ -1,0 +1,88 @@
+@import '../../../styles/respond.scss';
+.btn {
+  all: unset;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  position: relative;
+  padding: 13px 20px 13px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  &_outline {
+    color: var(--btn-primary);
+    fill: var(--btn-primary);
+    border-radius: 8px;
+    border: 1px solid var(--btn-primary);
+    transition: 0.3s;
+    &:hover {
+      color: var(--white);
+      fill: var(--white);
+      background-color: var(--btn-primary);
+    }
+  }
+  &_normal {
+    color: var(--white);
+    fill: var(--white);
+    background-color: var(--btn-primary);
+    border-radius: 8px;
+    border: 1px solid var(--btn-primary);
+    transition: 0.3s;
+    &:hover {
+      color: var(--btn-primary);
+      fill: var(--btn-primary);
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}
+.LoadingBtn {
+  all: unset;
+  position: relative;
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #faaa10;
+  color: #323232;
+  border: 1px solid #faaa10;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  &:hover {
+    background-color: #323232;
+    color: #faaa10;
+  }
+  &_loadComp {
+    position: absolute;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+  }
+  &_loading {
+    position: relative;
+    overflow: hidden !important;
+    pointer-events: none;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgb(255 255 255 / 87%);
+      transition: 0.3s;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 13px 18px;
+  border-radius: var(--XS, 8px);
+  border: 1px solid var(--Border-Dark, #cbcdd2);
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--Body-Text-Regular, #7c818f);
+  }
+}

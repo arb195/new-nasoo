@@ -1,0 +1,298 @@
+@import './respond.scss';
+@import './icons/icomoon/style.css';
+
+:root {
+  direction: rtl;
+  --white: #ffffff;
+  --bg-footer: #e8edf0;
+  --btn-primary: #4683b6;
+  --font-family: IRANYekanXVF, IRANYekan, tahoma;
+  --main-shadow: -4px 4px 8px rgba(160, 160, 160, 0.25);
+  --border-radius: 7px;
+  --Border-Text-Feild-B: #bedffa;
+  --BackGround-Text-Fields: #eff7fe;
+  --Body-Text-Dark: #3e4148;
+  --Body-Text-Darkest: #0c0d0e;
+  --Body-Text-Regular: #7c818f;
+  --Key-Primary-Primary: #4683b6;
+  --Key-Primary-Container: #172c3d;
+  --error: #cc3514;
+  --Border-Dark: #cbcdd2;
+  --Border-Regular: #e5e6e9;
+}
+body {
+  overflow-x: hidden;
+  &.overlay {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: -13px;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+  }
+
+  &.overlay-active {
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+#nprogress {
+  z-index: 1000000 !important;
+}
+
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+a {
+  text-decoration: none;
+}
+figure {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+}
+
+button {
+  font-family: var(--font-family);
+}
+
+.siteMain {
+  position: relative;
+  // @include respond-to('lg'){
+  //   overflow: hidden;
+  // }
+
+  &__overlay {
+    &:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: -13px;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+    &.overlay-active {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  background-color: var(--white);
+  font-family: var(--font-family);
+  -moz-font-feature-settings: 'ss02';
+  -webkit-font-feature-settings: 'ss02';
+  font-feature-settings: 'ss02';
+  font-weight: 400;
+  color: #323232;
+  font-size: 14px;
+  box-sizing: border-box;
+  &.noscroll {
+    overflow: hidden;
+  }
+  a {
+    color: inherit;
+  }
+  &.backDrop {
+    #__next,
+    .MuiDrawer-root {
+      filter: blur(5px);
+    }
+  }
+
+  .siteMain {
+    @include respond-to('xs') {
+      padding: 0 7px;
+    }
+  }
+}
+
+.progressBar {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--btn-primary);
+  span {
+    background-color: var(--btn-primary);
+  }
+}
+
+.SnackbarItem-message {
+  font-family: var(--font-family) !important;
+  font-weight: 700;
+}
+
+#nprogress {
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 10px;
+  .bar {
+    background: var(--btn-primary) !important;
+    height: 3px;
+  }
+  .peg {
+    box-shadow: 0 2px 10px var(--btn-primary), 0 2px 5px var(--btn-primary) !important;
+  }
+}
+
+.input-title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--Body-Text-Darkest, #0c0d0e);
+}
+.input-bottom-desc {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  color: var(--Body-Text-Regular, #7c818f);
+}
+
+.err-input {
+  border: 1px solid var(--primary-red) !important;
+  animation: err-move 0.2s alternate;
+}
+.d-none {
+  display: none !important;
+}
+.MuiPopover-root {
+  z-index: 130000 !important;
+}
+@keyframes err-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(-5px, 0);
+  }
+}
+/*--------------------------------------- FONTS -------------------------------------------------------------------*/
+
+@font-face {
+  font-family: IRANYekanXVF;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXVF.woff2')
+      format('woff2-variations'),
+    /* will be the standard and works in Safari now */
+      url('fonts/IRANYekan/woff2/IRANYekanXVF.woff2') format('woff2');
+  /* for the other supporting browsers */
+  font-weight: 100 1000;
+  font-display: fallback;
+}
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 100;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 200;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-UltraLight.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-DemiBold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-ExtraBold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: 900;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-Black.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IRANYekan;
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  src: url('fonts/IRANYekan/woff2/IRANYekanXFaNum-Regular.woff2')
+    format('woff2');
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  img[loading='lazy'] {
+    clip-path: inset(0.5px);
+  }
+}

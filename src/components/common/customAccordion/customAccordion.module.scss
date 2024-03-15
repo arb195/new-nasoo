@@ -1,0 +1,20 @@
+.accordion {
+  :global {
+    .MuiAccordion-root {
+      padding: 0;
+      border: 2px solid var(--Border-Dark);
+      box-shadow: none !important;
+      border-radius: var(--border-radius);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--Body-Text-Regular);
+      fill: var(--Body-Text-Regular);
+    }
+    .MuiAccordionDetails-root {
+      padding: 0;
+    }
+    .MuiAccordionSummary-content {
+      padding: 17px 12px;
+    }
+  }
+}

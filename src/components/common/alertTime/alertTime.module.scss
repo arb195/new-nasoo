@@ -1,0 +1,35 @@
+.alertTime {
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border: 1px solid var(--Key-Primary-Primary);
+  border-radius: var(--border-radius);
+  padding: 23px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--Body-Text-Regular);
+  fill: var(--Body-Text-Regular);
+  &_warn {
+    border: 1px solid var(--error);
+    #{$self}_icon {
+      fill: var(--error);
+    }
+    #{$self}_txt {
+      color: var(--error);
+    }
+    #{$self}_txtBold {
+      color: var(--error);
+    }
+  }
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &_link {
+    padding-right: 78px;
+    padding-left: 78px;
+  }
+}
