@@ -6,8 +6,10 @@ import Input from '@/root/src/components/common/input/input';
 import SelectField from '@/components/common/input/select';
 import OtpInput from '@/components/common/otpInput/otpInput';
 import { otpCode } from '@/api/otpCode';
-import { isEmail } from '@/hook/isEmail';
+// import { isEmail } from '@/hook/isEmail';
 import { useSnackbar } from 'notistack';
+import Btn from '@/components/common/btn/btn';
+import { countries } from '@/constants/allcountries';
 
 const AccountInfo = ({
   register,
@@ -50,100 +52,128 @@ const AccountInfo = ({
       });
   };
 
-  if (
-    watchFields?.phone?.length == 10 &&
-    watchFields?.countryCode &&
-    isSendPhoneOtp == false
-  ) {
-    setTimeout(() => {
-      sendCode(
-        watchFields?.countryCode + '' + watchFields?.phone,
-        setIsSendPhoneOtp,
-        false
-      );
-    }, 1000);
-  }
+  function dataSelectField() {
+    return countries.map((item) => {
+      return {
+        title: item?.ConNameFa,
+        value: item?.ConCode,
+      };
+    });
 
-  if (isEmail(watchFields?.email) && isSendEmailOtp == false) {
-    setTimeout(() => {
-      sendCode(watchFields?.email, setIsSendEmailOtp, true);
-    }, 1000);
-  }
-
-  function dataSelectField(data) {
-    return [
-      {
-        title: 'ایران',
-        icon: {
-          src: 'iran-flag',
-          width: '24px',
-          height: '24px',
-        },
-        value: '+98',
-      },
-      {
-        title: 'آمریکا',
-        icon: {
-          src: 'iran-flag',
-          width: '24px',
-          height: '24px',
-        },
-        value: '+1',
-      },
-    ];
+    // return [
+    //   {
+    //     title: 'ایران',
+    //     icon: {
+    //       src: 'iran-flag',
+    //       width: '24px',
+    //       height: '24px',
+    //     },
+    //     value: '+98',
+    //   },
+    // ];
   }
 
   return (
     <div className={s.accountInfo}>
-      <div
-        className={`${s.accountInfo_phone} ${
-          validPhone ? s.accountInfo_valid : ''
-        }`}
-      >
-        <Input
-          modifier={`${s.accountInfo_phoneInput}`}
-          {...register('phone', { pattern: /^[0-9]+$/g })}
-          type={'tel'}
-          register={register}
-          autoComplete="off"
-          maxLength="10"
-          pattern="[0-9۰-۹]*"
-          inputMode="numeric"
-          required
-          label="شماره تلفن همراه"
-          placeholder={'شماره تلفن همراه خود را وارد کنید.'}
-        />
-        <SelectField
-          name={'countryCode'}
-          label="کد کشور"
-          options={dataSelectField()}
-          FormController={controller}
-          formControl={control}
-          className={s.accountInfo_phoneSelect}
-        />
+      <div className={s.accountInfo_inputWrap}>
+        <div
+          className={`${s.accountInfo_phone} ${
+            validPhone ? s.accountInfo_valid : ''
+          }`}
+        >
+          <Input
+            modifier={`${s.accountInfo_phoneInput}`}
+            {...register('phone', { pattern: /^[0-9]+$/g })}
+            type={'tel'}
+            register={register}
+            autoComplete="off"
+            maxLength="11"
+            pattern="[0-9۰-۹]*"
+            inputMode="numeric"
+            required
+            label="شماره تلفن همراه"
+            placeholder={'شماره تلفن همراه خود را وارد کنید.'}
+          />
+          <SelectField
+            name={'countryCode'}
+            label="کد کشور"
+            options={dataSelectField()}
+            FormController={controller}
+            formControl={control}
+            className={s.accountInfo_phoneSelect}
+          />
+        </div>
+        {!validPhone && (
+          <Btn
+            className={s.accountInfo_inpuCodeSender}
+            onClick={(e) => {
+              e.preventDefault();
+              if (
+                watchFields?.phone?.length >= 10 &&
+                watchFields?.countryCode.length
+              ) {
+                sendCode(
+                  '+' +
+                    watchFields?.countryCode +
+                    '' +
+                    parseInt(watchFields?.phone),
+                  setIsSendPhoneOtp,
+                  false
+                );
+              } else {
+                enqueueSnackbar('لطفا شماره تلفن را کامل وارد کنید', {
+                  variant: 'error',
+                });
+              }
+            }}
+          >
+            ارسال کد تایید
+          </Btn>
+        )}
       </div>
       {isSendPhoneOtp && !validPhone && (
         <OtpInput
           isValid={setValidPhone}
-          user={watchFields?.countryCode + '' + watchFields?.phone}
+          user={
+            '+' + watchFields?.countryCode + '' + parseInt(watchFields?.phone)
+          }
         />
       )}
-      <div className={validEmail ? s.accountInfo_valid : ''}>
+      <div
+        className={`${s.accountInfo_inputWrap} ${
+          validEmail ? s.accountInfo_valid : ''
+        }`}
+      >
         <Input
           {...register('email')}
           type={'text'}
+          className={s.accountInfo_inpuBtn}
           register={register}
           label="ایمیل"
           placeholder={'ایمیل خود را وارد کنید.'}
           autoComplete="one-time-code"
           required
         />
+        {!validEmail && (
+          <Btn
+            className={s.accountInfo_inpuCodeSender}
+            onClick={(e) => {
+              e.preventDefault();
+              if (watchFields?.email) {
+                sendCode(watchFields?.email, setIsSendEmailOtp, true);
+              } else {
+                enqueueSnackbar('لطفا ایمیل را کامل وارد کنید', {
+                  variant: 'error',
+                });
+              }
+            }}
+          >
+            ارسال کد تایید
+          </Btn>
+        )}
       </div>
       {isSendEmailOtp && !validEmail && (
-        <OtpInput
-          isValid={setValidEmail}
-          user={watchFields?.countryCode + '' + watchFields?.phone}
-        />
+        <OtpInput isValid={setValidEmail} user={watchFields?.email} />
       )}
       <Input
         modifier={`${s.changePass_input} ${s.changePass_mb16}`}

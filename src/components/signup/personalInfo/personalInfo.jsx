@@ -54,10 +54,10 @@ const PersonalInfo = ({ register, controller, control }) => {
         />
         <SelectField
           name={'gender'}
-          label="جنسیت"
+          label="جنس"
           options={dataSelectField()}
           className={s.personalInfo_select}
-          placeholder="جنسیت خود را انتخاب کنید."
+          placeholder="جنس خود را انتخاب کنید."
           FormController={controller}
           formControl={control}
         />

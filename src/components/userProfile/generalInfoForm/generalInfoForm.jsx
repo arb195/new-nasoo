@@ -135,10 +135,10 @@ const GeneralInfoForm = () => {
             <form onSubmit={handleSubmit(onSumbit)}>
               <SelectField
                 name={'gender'}
-                label="جنسیت"
+                label="جنس"
                 options={dataSelectField()}
                 className={s.form_select}
-                placeholder="جنسیت خود را انتخاب کنید."
+                placeholder="جنس خود را انتخاب کنید."
                 FormController={Controller}
                 formControl={control}
               />

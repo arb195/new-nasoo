@@ -18,13 +18,15 @@ const OtpInput = ({ user, isValid }) => {
 
   const watchAllFields = watchOtp();
   const onOtpSumbit = (model) => {
+    let newModel = model;
     if (!isEmail(user)) {
-      model = { isMob: true, mobNum: user, ...model };
-      delete model.user;
+      newModel = { isMob: true, mobNum: user, ...newModel };
+      // delete newModel.user;
     } else {
-      model = { isMob: false, Email: user, ...model };
+      newModel = { isMob: false, Email: user, ...newModel };
     }
-    validOtpCode(model)
+
+    validOtpCode(newModel)
       .then(({ data }) => {
         setLoading(false);
         if (data?.Data === true) {
@@ -57,7 +59,7 @@ const OtpInput = ({ user, isValid }) => {
           type={'text'}
           register={registerOtp}
           label="کد تایید"
-          topDesc="کد تایید به نام کاربری شما ارسال شده است، آن‌ را وارد کنید."
+          topDesc="کد تایید برای شما ارسال شده است، آن‌ را وارد کنید."
           autoComplete="one-time-code"
           required
         />

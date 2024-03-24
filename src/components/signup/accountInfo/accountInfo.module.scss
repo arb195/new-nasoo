@@ -3,6 +3,7 @@
   &_phone {
     display: flex;
     align-items: center;
+    flex: 1 0 auto;
   }
   &_phoneInput {
     flex: 1 0 80%;
@@ -28,5 +29,17 @@
         border: 1px solid green !important;
       }
     }
+  }
+  &_inputWrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  &_inpuBtn {
+    flex: 1 0 auto;
+  }
+  &_inpuCodeSender {
+    margin-bottom: 7px;
+    padding: 14px 15px;
   }
 }

@@ -18,7 +18,7 @@ export const validOtpCode = (params) => {
   const otpCode = VALIDOTPCODE();
   return axios.post(otpCode, {
     MobNum: params?.mobNum ?? '',
-    Email: params?.user ?? '',
+    Email: params?.Email ?? '',
     TmpCode: params?.otpCodeInp,
     isMob: params?.isMob ?? false,
   });
