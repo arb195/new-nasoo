@@ -14,10 +14,10 @@ const PersonalMeetTable = () => {
   const [user, setUser] = appContext.user;
 
   const [colDefs, setColDefs] = useState([
-    { field: 'JafDesc', headerName: 'توضیحات' },
-    { field: 'JafDurView', headerName: 'مدت' },
-    { field: 'JafBarTypeName', headerName: 'عنوان' },
-    { field: 'JafDate', headerName: 'تاریخ' },
+    { field: 'JafDate', headerName: 'تاریخ', flex: 1 },
+    { field: 'JafBarTypeName', headerName: 'عنوان', flex: 2 },
+    { field: 'JafDurView', headerName: 'مدت', flex: 1 },
+    { field: 'JafDesc', headerName: 'توضیحات', flex: 3 },
   ]);
   const [rowData, setRowData] = useState([]);
 
@@ -45,7 +45,7 @@ const PersonalMeetTable = () => {
         className={`ag-theme-quartz ${s.meetTable_wrraper}`}
         style={{ height: 500 }}
       >
-        <AgGridReact rowData={rowData} columnDefs={colDefs} />
+        <AgGridReact rowData={rowData} columnDefs={colDefs} enableRtl={true} />
       </div>
     </div>
   );

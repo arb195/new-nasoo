@@ -5,6 +5,17 @@
       .ag-center-cols-container {
         align-items: center;
         width: 100% !important;
+        direction: rtl;
+      }
+      .ag-header-row {
+        background-color: #fff;
+      }
+      .ag-header,
+      .ag-row {
+        border-color: var(--Border-Text-Feild-B);
+      }
+      .ag-root-wrapper {
+        border-color: var(--Border-Text-Feild-B);
       }
     }
   }
