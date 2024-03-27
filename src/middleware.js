@@ -98,11 +98,7 @@ export function middleware(request) {
       return NextResponse.redirect(new URL('/personal-meet', request.url));
     }
   } else {
-    if (
-      request.nextUrl.pathname.startsWith(
-        '/personal-useMemo(() => first, [second])'
-      )
-    ) {
+    if (request.nextUrl.pathname.startsWith('/personal-meet')) {
       return NextResponse.redirect(new URL('/login', request.url));
     }
   }

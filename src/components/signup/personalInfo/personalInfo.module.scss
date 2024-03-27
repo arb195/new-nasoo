@@ -1,3 +1,4 @@
+@import '../../../styles/respond.scss';
 .personalInfo {
   &_logo {
     margin-bottom: 49px;
@@ -35,12 +36,17 @@
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 10%;
+    @include respond-to('md') {
+      flex-direction: column;
+    }
   }
-  & {
-    flex: 1 0 50%;
-  }
+
   &_datePicker {
     flex: 1 0 50%;
+    @include respond-to('md') {
+      flex: 1 0 100%;
+      width: 100%;
+    }
   }
   &_continubtn {
     padding: 10px 40px;

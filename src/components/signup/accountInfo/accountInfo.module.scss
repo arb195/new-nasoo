@@ -1,9 +1,13 @@
+@import '../../../styles/respond.scss';
 .accountInfo {
   margin-bottom: 10%;
   &_phone {
     display: flex;
     align-items: center;
     flex: 1 0 auto;
+    @include respond-to('md') {
+      width: 100%;
+    }
   }
   &_phoneInput {
     flex: 1 0 80%;
@@ -34,12 +38,29 @@
     display: flex;
     align-items: flex-end;
     gap: 5px;
+    @include respond-to('md') {
+      flex-direction: column;
+    }
   }
   &_inpuBtn {
     flex: 1 0 auto;
+    @include respond-to('md') {
+      width: 100%;
+    }
   }
   &_inpuCodeSender {
     margin-bottom: 7px;
     padding: 14px 15px;
+    @include respond-to('md') {
+      width: 95%;
+      text-align: center;
+      justify-content: center;
+    }
+    @include respond-to('xs') {
+      width: 94%;
+    }
+    @include respond-to('xxs') {
+      width: 92%;
+    }
   }
 }

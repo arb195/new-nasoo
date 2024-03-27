@@ -28,9 +28,7 @@ const Template = ({ children }) => {
     setUser(cookies.usersInfo ? cookies.usersInfo : false);
 
     if (cookies.usersInfo) {
-      const authorizationBase64 = new Buffer(
-        cookies.usersInfo.token + '.' + cookies.usersInfo.userID
-      ).toString('base64');
+      const authorizationBase64 = 'Bearer ' + cookies.token;
       axios.defaults.headers.common = { Authorization: authorizationBase64 };
     }
   }, [cookies]);
