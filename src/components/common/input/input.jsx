@@ -20,6 +20,7 @@ const Input = React.forwardRef(
       error = false,
       icon = false,
       textarea = false,
+      onKeyUpFunc,
       ...other
     },
     ref
@@ -65,6 +66,7 @@ const Input = React.forwardRef(
               placeholder={placeholder}
               onKeyUp={(e) => {
                 setHasVal(e.target.value.length);
+                onKeyUpFunc(e);
               }}
             />
           )}
