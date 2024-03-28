@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import s from './input.module.scss';
 import Icon from '@/components/common/icon/icon';
