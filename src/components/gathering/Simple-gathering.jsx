@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import FAQ from '../FAQ/faq';
+import Comments from '../comments/Comments';
 import style from './gathering.module.scss';
 import Icon from '@/components/common/icon/icon';
 import { Button } from '@mui/material';
@@ -28,6 +29,7 @@ const SimpleGathering = (props) => {
     : canSubmit
     ? 'میخواهم در این گردهمایی شرکت کنم'
     : 'این گردهمایی برای شما نیست';
+  const renderedCommentFaq = outDate ? <Comments /> : <FAQ />;
   return (
     <NsContainer className={style.simpleGathering}>
       <div
@@ -35,7 +37,7 @@ const SimpleGathering = (props) => {
           style[submited && 'submited']
         }`}
       >
-        <Icon src={'ribbon'} className={style.simpleGathering__ribbon__icon}/>
+        <Icon src={'ribbon'} className={style.simpleGathering__ribbon__icon} />
       </div>
       <NsContainer
         className={`${style.simpleGathering__main} ${
@@ -48,7 +50,9 @@ const SimpleGathering = (props) => {
               width="20"
               height="20"
               src={'down'}
-              className={isCollapse && style.simpleGathering__main__button__open}
+              className={
+                isCollapse && style.simpleGathering__main__button__open
+              }
             />
           </Button>
         </NsRow>
@@ -111,10 +115,7 @@ const SimpleGathering = (props) => {
               {' '}
               <p>{explanation}</p>
             </NsRow>
-            <NsRow>
-              {' '}
-              <FAQ />
-            </NsRow>
+            <NsRow>{renderedCommentFaq}</NsRow>
           </div>
         )}
       </NsContainer>
