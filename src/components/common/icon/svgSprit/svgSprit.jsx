@@ -238,9 +238,7 @@ const SvgSprit = () => {
       </symbol>
       <symbol
         id="ribbon"
-        width="16"
-        height="21"
-        viewBox="0 0 16 21"
+        viewBox="0 0 30 36"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

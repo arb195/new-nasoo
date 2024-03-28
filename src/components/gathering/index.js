@@ -22,9 +22,8 @@ const sampleGathering = {
 };
 const listType = ['همه', 'مخصوص من', 'برگزار شده', 'برگزار نشده'];
 const Gathering = () => {
-  const [cookies] = useCookies('UserId');
-  const payload = { id: cookies?.usersInfo.UserId };
-  AllGathering(payload)
+  const [cookies] = useCookies();
+  AllGathering({ id: cookies?.usersInfo?.UserId })
     .then(({ data }) => {
       console.log(data);
     })
@@ -39,10 +38,10 @@ const Gathering = () => {
   );
   return (
     <NsContainer className={style.gathering}>
-      <NsRow className={style.gathering_headline}>
+      <NsRow className={style.gathering__headline}>
         <span>گردهمایی</span>
-        <div className={style.gathering_headline_divider}></div>
-        <div className={style.gathering_headline_list}>
+        <div className={style.gathering__headline__divider}></div>
+        <div className={style.gathering__headline__list}>
           <CustomDropDown>{listType}</CustomDropDown>
         </div>
       </NsRow>
