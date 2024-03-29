@@ -128,7 +128,6 @@ const Login = ({
           <Logo />
         </div>
 
-        <Link href={'/gathering'}>گردهمایی</Link>
         <form className={s.login_form} onSubmit={handleSubmitEmail(onSumbit)}>
           <Input
             modifier={`${s.login_input} ${s.login_inputEmail}`}
