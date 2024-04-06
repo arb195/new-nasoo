@@ -4,7 +4,7 @@ import { NsContainer } from '@/components/common/grid/grid';
 import s from './payInfo.module.scss';
 const PayInfo = ({ status = 'success' }) => {
   return (
-    <NsContainer disableGutters={true}>
+    <NsContainer >
       <div
         className={`${s.payInfo_wrapper} ${
           status === 'success' ? s.payInfo_succes : s.payInfo_error

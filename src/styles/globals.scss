@@ -6,6 +6,7 @@
   --white: #ffffff;
   --bg-footer: #e8edf0;
   --btn-primary: #4683b6;
+  --Key-Secondary: #fdbf44;
   --font-family: IRANYekanXVF, IRANYekan, tahoma;
   --main-shadow: -4px 4px 8px rgba(160, 160, 160, 0.25);
   --border-radius: 7px;
@@ -202,21 +203,6 @@ body {
   }
   100% {
     transform: translate(-5px, 0);
-  }
-}
-.MuiContainer-padding {
-  padding: 0 80px;
-  @include respond-to('md') {
-    padding: 0 50px;
-  }
-  @include respond-to('sm') {
-    padding: 0 25px;
-  }
-  @include respond-to('xs') {
-    padding: 0 15px;
-  }
-  @include respond-to('xxs') {
-    padding: 0 10px;
   }
 }
 

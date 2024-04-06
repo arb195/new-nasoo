@@ -5,14 +5,24 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Icon from '@/components/common/icon/icon';
 
-const CustomAccordion = ({ title = '', children }) => {
+const CustomAccordion = ({ title = '', grow = flase, children }) => {
   return (
     <div className={s.accordion}>
       <Accordion>
         <AccordionSummary
           expandIcon={<Icon width="35" height="35" src={'down'} />}
         >
-          {title}
+          <div className={s.accordion_titleWrraper}>
+            <span className={s.accordion_title}>{title}</span>
+            {grow && (
+              <span className={s.accordion_growMain}>
+                <span
+                  style={{ width: grow + '%' }}
+                  className={s.accordion_grow}
+                ></span>
+              </span>
+            )}
+          </div>
         </AccordionSummary>
         <AccordionDetails>{children}</AccordionDetails>
       </Accordion>

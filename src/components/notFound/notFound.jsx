@@ -9,7 +9,7 @@ import { useCheckBreakpoint } from '@/hook/useMediaQuery';
 const NotFound = ({ device = null }) => {
   const [checkRes] = useCheckBreakpoint(device);
   return (
-    <NsContainer disableGutters={true}>
+    <NsContainer >
       <div className={s.notfound}>
         <div className={s.notfound_wrapper}>
           <div className={s.notfound_text}>

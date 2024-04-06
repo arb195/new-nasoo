@@ -39,6 +39,10 @@
   &_label {
     display: block;
     margin-bottom: 13px;
+    &__req {
+      margin-right: 5px;
+      opacity: 0.5;
+    }
   }
   &_passIcon {
     cursor: pointer;

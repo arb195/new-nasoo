@@ -38,7 +38,7 @@ const GeneralInfoForm = () => {
   }
   return (
     <div className={s.form}>
-      <NsContainer className={s.form_container} disableGutters={true}>
+      <NsContainer className={s.form_container}>
         <NsRow container spacing={3}>
           <NsCol item md={12} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>

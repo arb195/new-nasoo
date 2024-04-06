@@ -11,40 +11,30 @@ import Radio from '@/root/src/components/common/input/radio';
 import SelectField from '@/components/common/input/select';
 import Btn from '@/components/common/btn/btn';
 import CustomSortableList from '@/components/common/customSortableList/customSortableList';
+import dataSelectInput from './selectInputData.json';
+import { countries } from '@/constants/allcountries';
 
 const CognitiveForm = () => {
   const { register, handleSubmit, watch, control } = useForm();
 
   const onSumbit = (model) => {
+    // console.log(model);
     // router.push('/');
   };
 
   function dataSelectField(data) {
-    return [
-      {
-        title: 'ایران',
-        icon: {
-          src: 'iran-flag',
-          width: '24px',
-          height: '24px',
-        },
-        value: '+98',
-      },
-      {
-        title: 'آمریکا',
-        icon: {
-          src: 'iran-flag',
-          width: '24px',
-          height: '24px',
-        },
-        value: '+1',
-      },
-    ];
+    return data.map((item) => {
+      return {
+        title: item?.ConNameFa,
+        value: item?.ConCode,
+      };
+    });
   }
+
   return (
     <div className={s.cognitiveForm}>
-      <NsContainer className={s.cognitiveForm_container} disableGutters={true}>
-        <CustomAccordion title="فرم شناختی درمانگر">
+      <NsContainer className={s.cognitiveForm_container}>
+        <CustomAccordion title="فرم شناختی درمانگر" grow={20}>
           <div className={s.cognitiveForm_contentWrraper}>
             <span className={s.cognitiveForm_alertTxt}>
               <Icon
@@ -60,99 +50,100 @@ const CognitiveForm = () => {
               <NsRow container spacing={3}>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'marital-status'}
                     label="وضعیت تأهل"
-                    options={dataSelectField()}
+                    options={dataSelectInput.marital_status}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'children-count'}
                     label="چند فرزند دارید؟"
-                    options={dataSelectField()}
+                    options={dataSelectInput.count}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'born-country'}
                     label="در کدام کشور متولد شده‌اید؟"
-                    options={dataSelectField()}
+                    options={dataSelectField(countries)}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'born-city'}
                     label="در کدام شهر متولد شده‌اید؟"
-                    options={dataSelectField()}
+                    options={dataSelectField(countries)}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'live-country'}
                     label="اکنون در کدام کشور زندگی می‌کنید؟"
-                    options={dataSelectField()}
+                    options={dataSelectField(countries)}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'live-country'}
                     label="اکنون در کدام شهر زندگی می‌کنید؟"
-                    options={dataSelectField()}
+                    options={dataSelectField(countries)}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'children-family'}
                     label="فرزند چندم خانواده هستید؟"
-                    options={dataSelectField()}
+                    options={dataSelectInput.count}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'degree'}
                     label="مدرک تحصیلی شما چیست؟"
-                    options={dataSelectField()}
+                    options={dataSelectInput.degree_education}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
-                  <SelectField
-                    name={'country-code'}
-                    label={'آدرس سایت شخصی'}
-                    required={false}
-                    options={dataSelectField()}
-                    FormController={Controller}
-                    formControl={control}
+                  <Input
+                    {...register('personal-website')}
+                    type={'text'}
+                    register={register}
+                    label="آدرس سایت شخصی"
+                    placeholder={'آدرس سایت شخصی خود را وارد کنید.'}
+                    autoComplete="one-time-code"
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
-                  <SelectField
-                    name={'country-code'}
-                    label={'آدرس اینستاگرام'}
+                  <Input
+                    {...register('personal-insta')}
+                    type={'text'}
+                    register={register}
+                    label="آدرس اینستاگرام"
+                    placeholder={'آدرس اینستاگرام خود را وارد کنید..'}
+                    autoComplete="one-time-code"
                     required={false}
-                    options={dataSelectField()}
-                    FormController={Controller}
-                    formControl={control}
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('field-study')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -166,7 +157,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('skill-field')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -180,7 +171,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('job')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -194,7 +185,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('layoff-date')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -205,7 +196,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('life-achieve')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -216,7 +207,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('bad-happening')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -234,11 +225,16 @@ const CognitiveForm = () => {
                         <span>(گزینه‌ها را براساس اولویت مرتب کنید.)</span>
                       </span>
                     }
+                    data={dataSelectInput.ordersOfMind}
+                    name={'ordersOfMind'}
+                    register={register}
+                    FormController={Controller}
+                    formControl={control}
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('importance-and-priority')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -249,7 +245,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('improve-mind')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -260,7 +256,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('mental-states')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -271,7 +267,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('self-correction')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -282,7 +278,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('calm-yourself-down')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -293,7 +289,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('favorite-hobby')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -304,22 +300,22 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Radio
-                    id="s1"
+                    id="before-nasoo1"
                     label="آیا قبل از ثبت نام در مدرسه ناسو برای بهبود و اصلاح ساختار ذهن خود، نقشه‌ی راه و برنامه‌ی مشخصی داشته‌اید؟"
                     htmllabel="بله"
                     register={register}
-                    name="s1"
+                    name="before-nasoo"
                   />
                   <Radio
-                    id="s2"
+                    id="before-nasoo2"
                     htmllabel="خیر"
                     register={register}
-                    name="s1"
+                    name="before-nasoo"
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('rangeA')}
+                    {...register('hour-recovery')}
                     type={'range'}
                     register={register}
                     className={s.cognitiveForm_range}
@@ -332,7 +328,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('biggest-obstacle')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -343,7 +339,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('reasons-selection')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -354,87 +350,87 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'know-school'}
                     label="چگونه با مدرسه آشنا شده‌اید؟"
-                    options={dataSelectField()}
+                    options={dataSelectInput.introduction}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item md={12} xss={24}>
                   <SelectField
-                    name={'country-code'}
+                    name={'in-webinar'}
                     label="آیا در وبینار «آشنایی با مدرسه» شرکت کرده‌اید؟"
-                    options={dataSelectField()}
+                    options={dataSelectInput.yes_no}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Radio
-                    id="s9"
+                    id="school-introduction9"
                     label="آیا قبل از ثبت‌نام، فیلم معرفی مدرسه را دیدید؟ (فیلمی که در
                       صفحه اول سایت قرار داده‌ایم)"
                     htmllabel="بله"
                     register={register}
-                    name="s2"
+                    name="school-introduction"
                   />
                   <Radio
-                    id="s10"
+                    id="school-introduction10"
                     htmllabel="خیر"
                     register={register}
-                    name="s2"
+                    name="school-introduction"
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Radio
-                    id="s7"
+                    id="physical-illness7"
                     label="آیا بیماری جسمی خاصی دارید؟"
                     htmllabel="بله"
                     register={register}
-                    name="s2"
+                    name="physical-illness"
                   />
                   <Radio
-                    id="s8"
+                    id="physical-illness8"
                     htmllabel="خیر"
                     register={register}
-                    name="s2"
+                    name="physical-illness"
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Radio
-                    id="s6"
+                    id="psychologist-diagnosis6"
                     label="آیا قبلا توسط روان‌شناس یا روان‌پزشک، تشخیص خاصی گرفته‌اید؟"
                     htmllabel="بله"
                     register={register}
-                    name="s2"
+                    name="psychologist-diagnosis"
                   />
                   <Radio
-                    id="s5"
+                    id="psychologist-diagnosis5"
                     htmllabel="خیر"
                     register={register}
-                    name="s2"
+                    name="psychologist-diagnosis"
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Radio
-                    id="s3"
+                    id="drug-psychiatrist3"
                     label="آیا قبلا توسط روان‌شناس یا روان‌پزشک، دارویی برای شما تجویز
                     شده است؟"
                     htmllabel="بله"
                     register={register}
-                    name="s2"
+                    name="drug-psychiatrist"
                   />
                   <Radio
-                    id="s4"
+                    id="drug-psychiatrist4"
                     htmllabel="خیر"
                     register={register}
-                    name="s2"
+                    name="drug-psychiatrist"
                   />
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('changes-in-3-years')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -445,7 +441,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('job-in-3-years')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -456,7 +452,7 @@ const CognitiveForm = () => {
                 </NsCol>
                 <NsCol item xss={24}>
                   <Input
-                    {...register('showname')}
+                    {...register('user-note')}
                     type={'text'}
                     textarea={true}
                     register={register}
@@ -466,7 +462,9 @@ const CognitiveForm = () => {
                   />
                 </NsCol>
               </NsRow>
-              <Btn type={'submit'}>ذخیره اطلاعات</Btn>
+              <div className={s.cognitiveForm_btn}>
+                <Btn type={'submit'}>ذخیره اطلاعات</Btn>
+              </div>
             </form>
           </div>
         </CustomAccordion>

@@ -15,7 +15,7 @@ const BuyTime = () => {
   };
   return (
     <div className={s.buyTime}>
-      <NsContainer disableGutters={true}>
+      <NsContainer >
         <NsRow container columnSpacing={3}>
           <NsCol item md={12}>
             <span className={s.buyTime_title}>افزایش مدت جلسه فردی</span>

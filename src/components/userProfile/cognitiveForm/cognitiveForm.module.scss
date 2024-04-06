@@ -1,8 +1,9 @@
 @import '../../../styles/respond.scss';
 .cognitiveForm {
+  position: relative;
   margin-bottom: 20px;
   &_contentWrraper {
-    padding: 28px 12px 0;
+    padding: 28px 12px 10px;
     background-color: var(--Border-Regular);
   }
   &_alertTxt {
@@ -16,7 +17,9 @@
     line-height: 32px;
     margin-bottom: 58px;
     &__icon {
-      flex: 1 0 auto;
+      @include respond-to('sm') {
+        flex: 1 0 auto;
+      }
     }
     @include respond-to('md') {
       font-size: 15px;
@@ -29,5 +32,34 @@
   }
   &_range {
     accent-color: var(--Border-Text-Feild-B);
+  }
+  &_btn {
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 4px 4px 8px rgba(160, 160, 160, 0.25);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 50vw;
+      background-color: #fff;
+      display: block;
+      height: 100%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      bottom: 0;
+      height: 100%;
+      width: 50vw;
+      background-color: #fff;
+      display: block;
+    }
   }
 }

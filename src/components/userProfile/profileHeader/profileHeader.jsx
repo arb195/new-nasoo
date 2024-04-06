@@ -22,7 +22,7 @@ const ProfileHeader = ({ device, profimg = false }) => {
           <Icon width="24" height="24" src={'camera'} />
         </span>
       </div>
-      <NsContainer className={s.profHeader_profContainer} disableGutters={true}>
+      <NsContainer className={s.profHeader_profContainer} >
         <div className={s.profHeader_profWrapper}>
           {profimg ? (
             <ImageItem

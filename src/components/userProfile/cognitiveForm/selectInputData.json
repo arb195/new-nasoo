@@ -1,0 +1,134 @@
+{
+  "marital_status": [
+    {
+      "title": "متاهل",
+      "value": "married"
+    },
+    {
+      "title": "مجرد",
+      "value": "single"
+    }
+  ],
+  "count": [
+    {
+      "title": "0",
+      "value": "0"
+    },
+    {
+      "title": "1",
+      "value": "1"
+    },
+    {
+      "title": "2",
+      "value": "2"
+    },
+    {
+      "title": "3",
+      "value": "3"
+    },
+    {
+      "title": "4",
+      "value": "4"
+    },
+    {
+      "title": "5",
+      "value": "5"
+    },
+    {
+      "title": "6",
+      "value": "6"
+    },
+    {
+      "title": "7",
+      "value": "7"
+    },
+    {
+      "title": "8",
+      "value": "8"
+    },
+    {
+      "title": "9",
+      "value": "9"
+    }
+  ],
+  "yes_no": [
+    {
+      "title": "بله",
+      "value": "yes"
+    },
+    {
+      "title": "خیر",
+      "value": "no"
+    }
+  ],
+  "degree_education": [
+    {
+      "title": "ابتدایی",
+      "value": "elementary"
+    },
+    {
+      "title": "راهنمایی",
+      "value": "guidance"
+    },
+    {
+      "title": "دیپلم",
+      "value": "diploma"
+    },
+    {
+      "title": "فوق دیپلم",
+      "value": "associate"
+    },
+    {
+      "title": "لیسانس",
+      "value": "bachelor"
+    },
+    {
+      "title": "فوق لیسانس",
+      "value": "master"
+    },
+    {
+      "title": "دکترا",
+      "value": "doctorate"
+    }
+  ],
+  "introduction": [
+    {
+      "title": "دوستان",
+      "value": "friends"
+    },
+    {
+      "title": "گوگل",
+      "value": "google"
+    },
+    {
+      "title": "وبینار",
+      "value": "webinar"
+    },
+    {
+      "title": "اینستاگرام",
+      "value": "instagram"
+    },
+    {
+      "title": "سایت مدرسه",
+      "value": "website"
+    }
+  ],
+  "ordersOfMind": [
+    {
+      "title": "مورد اول",
+      "value": "item1"
+    },
+    {
+      "title": "مورد دوم",
+      "value": "item2"
+    },
+    {
+      "title": "مورد سوم",
+      "value": "item3"
+    },
+    {
+      "title": "مورد چهارم",
+      "value": "item4"
+    }
+  ]
+}

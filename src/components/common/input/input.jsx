@@ -35,7 +35,12 @@ const Input = React.forwardRef(
       >
         <span className={s.input_wrapperInput}>
           {label != null ? (
-            <span className={`input-title ${s.input_label}`}>{label}</span>
+            <span className={`input-title ${s.input_label}`}>
+              {label}
+              {!required && (
+                <span className={s.input_label__req}>(اجباری نیست)</span>
+              )}
+            </span>
           ) : null}
           {topDesc != null ? (
             <span className={s.input_topDesc}>{topDesc}</span>
