@@ -29,6 +29,9 @@
       border: 1px solid #bedffa;
     }
   }
+  &_textArea {
+    min-height: 150px;
+  }
   &_fieldHasVal {
     border: 1px solid var(--Border-Text-Feild-B);
     background: var(--BackGround-Text-Fields);

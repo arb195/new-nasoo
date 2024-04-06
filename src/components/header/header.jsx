@@ -6,13 +6,13 @@ import Link from 'next/link';
 import { NsContainer, NsRow, NsCol } from '@/components/common/grid/grid';
 import { useCheckBreakpoint } from '@/hook/useMediaQuery';
 
-const Header = ({device}) => {
+const Header = ({ device }) => {
   const [checkRes] = useCheckBreakpoint(device);
   return (
     <header className={s.siteHeader}>
       <NsContainer disableGutters={true}>
         <NsRow container>
-          <NsCol item md={12} xs={24}>
+          <NsCol item xsss={24} md={12}>
             <div className={s.siteHeader_right}>
               <Icon
                 className={s.siteHeader_logo}
@@ -37,16 +37,16 @@ const Header = ({device}) => {
             <NsCol item md={12}>
               <div className={s.siteHeader_left}>
                 <Link href="#" className={s.siteHeader_icon}>
-                  <Icon width="32" height="32" src="profile-circle" />
-                </Link>
-                <Link href="#" className={s.siteHeader_icon}>
-                  <Icon width="32" height="32" src="notification" />
+                  <Icon width="32" height="32" src="message" />
                 </Link>
                 <Link href="#" className={s.siteHeader_icon}>
                   <Icon width="32" height="32" src="like" />
                 </Link>
                 <Link href="#" className={s.siteHeader_icon}>
-                  <Icon width="32" height="32" src="message" />
+                  <Icon width="32" height="32" src="notification" />
+                </Link>
+                <Link href="#" className={s.siteHeader_icon}>
+                  <Icon width="32" height="32" src="profile-circle" />
                 </Link>
               </div>
             </NsCol>

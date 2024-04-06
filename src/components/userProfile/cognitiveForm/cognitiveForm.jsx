@@ -47,13 +47,18 @@ const CognitiveForm = () => {
         <CustomAccordion title="فرم شناختی درمانگر">
           <div className={s.cognitiveForm_contentWrraper}>
             <span className={s.cognitiveForm_alertTxt}>
-              <Icon width="21" height="21" src={'alert-border'} />
+              <Icon
+                width="21"
+                height="21"
+                src={'alert-border'}
+                className={s.cognitiveForm_alertTxt__icon}
+              />
               اطلاعات تکمیلی پروفایل شما محرمانه خواهد بود و فقط برای
               روان‌درمانگر شما قابل نمایش است.
             </span>
             <form onSubmit={handleSubmit(onSumbit)}>
               <NsRow container spacing={3}>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="وضعیت تأهل"
@@ -62,7 +67,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="چند فرزند دارید؟"
@@ -71,7 +76,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="در کدام کشور متولد شده‌اید؟"
@@ -80,7 +85,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="در کدام شهر متولد شده‌اید؟"
@@ -89,7 +94,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="اکنون در کدام کشور زندگی می‌کنید؟"
@@ -98,7 +103,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="اکنون در کدام شهر زندگی می‌کنید؟"
@@ -107,7 +112,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="فرزند چندم خانواده هستید؟"
@@ -116,7 +121,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="مدرک تحصیلی شما چیست؟"
@@ -125,25 +130,27 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
-                    label={<span>آدرس سایت شخصی (اجباری نیست)</span>}
+                    label={'آدرس سایت شخصی'}
+                    required={false}
                     options={dataSelectField()}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
-                    label={<span>آدرس اینستاگرام (اجباری نیست)</span>}
+                    label={'آدرس اینستاگرام'}
+                    required={false}
                     options={dataSelectField()}
                     FormController={Controller}
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -157,7 +164,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -171,7 +178,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -185,7 +192,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -196,7 +203,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -207,7 +214,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -218,7 +225,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <CustomSortableList
                     title={
                       <span>
@@ -229,7 +236,7 @@ const CognitiveForm = () => {
                     }
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -240,7 +247,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -251,7 +258,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -262,7 +269,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -273,7 +280,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -284,7 +291,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -295,7 +302,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Radio
                     id="s1"
                     label="آیا قبل از ثبت نام در مدرسه ناسو برای بهبود و اصلاح ساختار ذهن خود، نقشه‌ی راه و برنامه‌ی مشخصی داشته‌اید؟"
@@ -310,7 +317,7 @@ const CognitiveForm = () => {
                     name="s1"
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('rangeA')}
                     type={'range'}
@@ -323,7 +330,7 @@ const CognitiveForm = () => {
                     max="50"
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -334,7 +341,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -345,7 +352,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="چگونه با مدرسه آشنا شده‌اید؟"
@@ -354,7 +361,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item md={12} xs={24}>
+                <NsCol item md={12} xss={24}>
                   <SelectField
                     name={'country-code'}
                     label="آیا در وبینار «آشنایی با مدرسه» شرکت کرده‌اید؟"
@@ -363,7 +370,7 @@ const CognitiveForm = () => {
                     formControl={control}
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Radio
                     id="s9"
                     label="آیا قبل از ثبت‌نام، فیلم معرفی مدرسه را دیدید؟ (فیلمی که در
@@ -379,7 +386,7 @@ const CognitiveForm = () => {
                     name="s2"
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Radio
                     id="s7"
                     label="آیا بیماری جسمی خاصی دارید؟"
@@ -394,7 +401,7 @@ const CognitiveForm = () => {
                     name="s2"
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Radio
                     id="s6"
                     label="آیا قبلا توسط روان‌شناس یا روان‌پزشک، تشخیص خاصی گرفته‌اید؟"
@@ -409,7 +416,7 @@ const CognitiveForm = () => {
                     name="s2"
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Radio
                     id="s3"
                     label="آیا قبلا توسط روان‌شناس یا روان‌پزشک، دارویی برای شما تجویز
@@ -425,7 +432,7 @@ const CognitiveForm = () => {
                     name="s2"
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -436,7 +443,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}
@@ -447,7 +454,7 @@ const CognitiveForm = () => {
                     required
                   />
                 </NsCol>
-                <NsCol item xs={24}>
+                <NsCol item xss={24}>
                   <Input
                     {...register('showname')}
                     type={'text'}

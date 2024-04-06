@@ -204,6 +204,22 @@ body {
     transform: translate(-5px, 0);
   }
 }
+.MuiContainer-padding {
+  padding: 0 80px;
+  @include respond-to('md') {
+    padding: 0 50px;
+  }
+  @include respond-to('sm') {
+    padding: 0 25px;
+  }
+  @include respond-to('xs') {
+    padding: 0 15px;
+  }
+  @include respond-to('xxs') {
+    padding: 0 10px;
+  }
+}
+
 /*--------------------------------------- FONTS -------------------------------------------------------------------*/
 
 @font-face {

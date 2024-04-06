@@ -1,3 +1,5 @@
+@import '../../../styles/respond.scss';
+
 .alertTime {
   $self: &;
   display: flex;
@@ -8,9 +10,13 @@
   border-radius: var(--border-radius);
   padding: 23px;
   font-size: 20px;
-  font-weight: 500;
   color: var(--Body-Text-Regular);
   fill: var(--Body-Text-Regular);
+  @include respond-to('sm') {
+    font-size: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
   &_warn {
     border: 1px solid var(--error);
     #{$self}_icon {
@@ -27,9 +33,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    @include respond-to('xs') {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
   &_link {
     padding-right: 78px;
     padding-left: 78px;
+    @include respond-to('md') {
+      padding: 10px 20px;
+      width: 100%;
+    }
   }
 }

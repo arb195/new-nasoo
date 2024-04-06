@@ -1,3 +1,4 @@
+@import '../../../styles/respond.scss';
 .cognitiveForm {
   margin-bottom: 20px;
   &_contentWrraper {
@@ -14,6 +15,17 @@
     font-weight: 500;
     line-height: 32px;
     margin-bottom: 58px;
+    &__icon {
+      flex: 1 0 auto;
+    }
+    @include respond-to('md') {
+      font-size: 15px;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+    @include respond-to('sm') {
+      font-size: 12px;
+    }
   }
   &_range {
     accent-color: var(--Border-Text-Feild-B);

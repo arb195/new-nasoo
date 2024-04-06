@@ -1,3 +1,4 @@
+@import '../../../styles/respond.scss';
 .meetForm {
   border: 1px solid var(--Border-Text-Feild-B);
   border-radius: var(--border-radius);
@@ -8,11 +9,20 @@
     justify-content: space-between;
     padding: 28px 23px;
     border-bottom: 1px solid var(--Border-Text-Feild-B);
+    @include respond-to('md') {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
   }
   &_headTitle {
     font-weight: 500;
     font-size: 18px;
     color: var(--Key-Primary-Container);
+    @include respond-to('md') {
+      font-weight: 500;
+      font-size: 17px;
+    }
   }
   &_radioWrraper {
     display: flex;
@@ -52,11 +62,15 @@
   &_formTxt {
     border: 1px solid var(--Border-Dark);
     border-radius: var(--border-radius);
+    min-height: 100px;
     padding: 31px 22px;
     font-size: 14px;
     font-weight: 400;
     &::placeholder {
       color: var(--Body-Text-Regular);
+    }
+    @include respond-to('md') {
+      padding: 10px 12px;
     }
   }
   &_btnSubmit {

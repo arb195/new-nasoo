@@ -40,7 +40,7 @@ const GeneralInfoForm = () => {
     <div className={s.form}>
       <NsContainer className={s.form_container} disableGutters={true}>
         <NsRow container spacing={3}>
-          <NsCol item md={12} xs={24}>
+          <NsCol item md={12} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <Input
                 {...register('name', { value: 'محدثه' })}
@@ -53,7 +53,7 @@ const GeneralInfoForm = () => {
               />
             </form>
           </NsCol>
-          <NsCol item md={12} xs={24}>
+          <NsCol item md={12} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <Input
                 {...register('family', { value: 'ابراهیم' })}
@@ -66,7 +66,7 @@ const GeneralInfoForm = () => {
               />
             </form>
           </NsCol>
-          <NsCol item md={12} xs={24}>
+          <NsCol item md={12} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <Input
                 {...register('showname', { value: 'محدثه ابراهیم' })}
@@ -79,7 +79,7 @@ const GeneralInfoForm = () => {
               />
             </form>
           </NsCol>
-          <NsCol item md={24} xs={24}>
+          <NsCol item md={24} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <div className={s.form_phone}>
                 <Input
@@ -98,6 +98,7 @@ const GeneralInfoForm = () => {
                 <SelectField
                   name={'country-code'}
                   label="کد کشور"
+                  required={true}
                   options={dataSelectField()}
                   FormController={Controller}
                   formControl={control}
@@ -106,7 +107,7 @@ const GeneralInfoForm = () => {
               </div>
             </form>
           </NsCol>
-          <NsCol item md={24} xs={24}>
+          <NsCol item md={24} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <Input
                 {...register('email', {
@@ -121,7 +122,7 @@ const GeneralInfoForm = () => {
               />
             </form>
           </NsCol>
-          <NsCol item md={12} xs={24}>
+          <NsCol item md={12} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <CustomDatePicker
                 className={s.form_datePicker}
@@ -131,11 +132,12 @@ const GeneralInfoForm = () => {
               />
             </form>
           </NsCol>
-          <NsCol item md={12} xs={24}>
+          <NsCol item md={12} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <SelectField
                 name={'gender'}
                 label="جنس"
+                required={true}
                 options={dataSelectField()}
                 className={s.form_select}
                 placeholder="جنس خود را انتخاب کنید."
@@ -144,7 +146,7 @@ const GeneralInfoForm = () => {
               />
             </form>
           </NsCol>
-          <NsCol item md={24}>
+          <NsCol item md={24} xss={24}>
             <form onSubmit={handleSubmit(onSumbit)}>
               <Input
                 modifier={`${s.changePass_input} ${s.changePass_mb16}`}

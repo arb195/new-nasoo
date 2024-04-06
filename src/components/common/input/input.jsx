@@ -43,7 +43,7 @@ const Input = React.forwardRef(
           {textarea ? (
             <textarea
               {...register(name, { required, value: defaultValue })}
-              className={`${s.input_field} ${
+              className={`${s.input_field} ${s.input_textArea} ${
                 hasVal != 0 ? s.input_fieldHasVal : ''
               }`}
               type={isshow ? 'text' : type}

@@ -10,7 +10,7 @@ import PersonalMeetTable from './personalMeetTable/personalMeetTable';
 const PersonalMeet = () => {
   return (
     <div className={s.personalMeet}>
-      <NsContainer disableGutters={true}>
+      <NsContainer disableGutters={true} className="MuiContainer-padding">
         <MeetInfo />
         <AletTime warn={false} url="/buy-time" />
         <PersonalMeetForm />

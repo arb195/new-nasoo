@@ -107,6 +107,11 @@ const SelectField = ({
               {label && (
                 <span className={`input-title ${s.selectBox_label}`}>
                   {label}
+                  {!required && (
+                    <span className={s.selectBox_label__req}>
+                      (اجباری نیست)
+                    </span>
+                  )}
                 </span>
               )}
               <div className={s.selectBox_selectWrapper}>

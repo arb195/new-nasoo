@@ -93,15 +93,15 @@ export function middleware(request) {
   const userInfo = request.cookies.get('usersInfo');
   const { device } = userAgent(request);
 
-  if (userInfo) {
-    if (request.nextUrl.pathname.startsWith('/login')) {
-      return NextResponse.redirect(new URL('/personal-meet', request.url));
-    }
-  } else {
-    if (request.nextUrl.pathname.startsWith('/personal-meet')) {
-      return NextResponse.redirect(new URL('/login', request.url));
-    }
-  }
+  // if (userInfo) {
+  //   if (request.nextUrl.pathname.startsWith('/login')) {
+  //     return NextResponse.redirect(new URL('/personal-meet', request.url));
+  //   }
+  // } else {
+  //   if (request.nextUrl.pathname.startsWith('/personal-meet')) {
+  //     return NextResponse.redirect(new URL('/login', request.url));
+  //   }
+  // }
 
   // if (request.nextUrl.pathname == '/individual-meet') {
   //   return NextResponse.redirect(new URL('/login', request.url));

@@ -96,7 +96,7 @@ const AccountInfo = ({
           />
           <SelectField
             name={'countryCode'}
-            label="کد کشور"
+            label="کشور"
             options={dataSelectField()}
             FormController={controller}
             formControl={control}
