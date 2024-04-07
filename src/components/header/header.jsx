@@ -24,7 +24,7 @@ const Header = ({ device }) => {
                 <Link href="#" className={s.siteHeader_item}>
                   آموزش
                 </Link>
-                <Link href="#" className={s.siteHeader_item}>
+                <Link href="/personal-meet" className={s.siteHeader_item}>
                   جلسات فردی
                 </Link>
                 <Link href="#" className={s.siteHeader_item}>
@@ -45,7 +45,7 @@ const Header = ({ device }) => {
                 <Link href="#" className={s.siteHeader_icon}>
                   <Icon width="32" height="32" src="notification" />
                 </Link>
-                <Link href="#" className={s.siteHeader_icon}>
+                <Link href="/profile" className={s.siteHeader_icon}>
                   <Icon width="32" height="32" src="profile-circle" />
                 </Link>
               </div>

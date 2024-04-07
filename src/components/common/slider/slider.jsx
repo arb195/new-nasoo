@@ -22,7 +22,6 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/effect-creative';
 import 'swiper/css/effect-cards';
 import 'swiper/css/effect-coverflow';
-import { useActivity } from '@/hook/useActivity';
 
 const Slider = (props) => {
   const {
@@ -44,18 +43,9 @@ const Slider = (props) => {
     ...other
   } = props;
 
-  const [active] = useActivity();
   const [configMain, setConfigMain] = useState(config);
 
   const swiperreflocal = useRef();
-
-  useEffect(() => {
-    if (swiperreflocal && active) {
-      if (!swiperreflocal?.autoplay?.paused) {
-        swiperreflocal?.current?.swiper?.autoplay?.start();
-      }
-    }
-  }, [active, swiperreflocal]);
 
   useEffect(() => {
     if (swiperreflocal) {

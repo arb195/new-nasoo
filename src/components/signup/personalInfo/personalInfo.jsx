@@ -5,6 +5,8 @@ import Input from '@/root/src/components/common/input/input';
 import SelectField from '@/components/common/input/select';
 import CustomDatePicker from '@/components/common/customDatePicker/customDatePicker';
 import { isCharEn } from '@/hook/isCharEn';
+import SweetAlert2 from 'react-sweetalert2';
+import { useState } from 'react';
 
 const PersonalInfo = ({ register, controller, control }) => {
   function dataSelectField(data) {
@@ -24,8 +26,26 @@ const PersonalInfo = ({ register, controller, control }) => {
     ];
   }
 
+  const [swalProps, setSwalProps] = useState({});
+
+  function handleClick(title, text) {
+    setSwalProps({
+      show: true,
+      icon: 'error',
+      title: title,
+      text: text,
+      confirmButtonText: 'متوجه شدم',
+    });
+  }
+
   return (
     <div className={s.personalInfo}>
+      <SweetAlert2
+        {...swalProps}
+        didClose={() => {
+          setSwalProps({});
+        }}
+      />
       <Input
         modifier={`${s.personalInfo_input}`}
         {...register('name')}
@@ -37,7 +57,7 @@ const PersonalInfo = ({ register, controller, control }) => {
         required
         onKeyUpFunc={(e) => {
           if (isCharEn(e)) {
-            alert('لطفا نام خود را فارسی وارد کنید :');
+            handleClick('خطا', 'لطفا نام خود را فارسی وارد کنید ');
             e.target.value = '';
           }
         }}
@@ -53,7 +73,7 @@ const PersonalInfo = ({ register, controller, control }) => {
         required
         onKeyUpFunc={(e) => {
           if (isCharEn(e)) {
-            alert('لطفا نام خانوادگی خود را فارسی وارد کنید :');
+            handleClick('خطا', 'لطفا نام خانوادگی خود را فارسی وارد کنید ');
             e.target.value = '';
           }
         }}

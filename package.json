@@ -70,6 +70,7 @@
     "react-scroll-trigger": "^0.6.14",
     "react-sortable-hoc": "^2.0.0",
     "react-sticky-box": "^2.0.4",
+    "react-sweetalert2": "^0.6.0",
     "react-table": "^7.8.0",
     "react-tilt": "^1.0.2",
     "react-to-print": "^2.14.15",

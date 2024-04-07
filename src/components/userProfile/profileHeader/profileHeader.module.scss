@@ -53,6 +53,7 @@
     z-index: 10;
   }
   &_changProf {
+    position: relative;
     display: flex;
     align-items: center;
     color: var(--Body-Text-Regular);
@@ -62,8 +63,10 @@
     font-size: 11px;
     line-height: 18px;
     font-weight: 400;
+    cursor: pointer;
     @include respond-to('md') {
       margin-bottom: 0;
+      z-index: 20;
     }
   }
 }

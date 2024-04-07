@@ -71,7 +71,7 @@ const Input = React.forwardRef(
               placeholder={placeholder}
               onKeyUp={(e) => {
                 setHasVal(e.target.value.length);
-                onKeyUpFunc(e);
+                onKeyUpFunc && onKeyUpFunc(e);
               }}
             />
           )}

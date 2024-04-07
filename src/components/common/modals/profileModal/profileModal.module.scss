@@ -1,0 +1,38 @@
+@import '../../../../styles/respond.scss';
+
+.profileModal {
+  padding: 20px 30px;
+  max-width: 90vw;
+  @include respond-to('md') {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+  &_slider {
+    margin-bottom: 10px;
+    padding-bottom: 40px;
+    :global {
+      .swiper-slide {
+        opacity: 0.5;
+      }
+      .swiper-slide-active {
+        opacity: 1;
+      }
+    }
+  }
+  &_sliderImg {
+    overflow: hidden;
+    border-radius: var(--border-radius);
+  }
+  &_uploader {
+    width: 100%;
+  }
+  &_title {
+    display: block;
+    font-style: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &_btn {
+    padding: 5px 30px;
+  }
+}

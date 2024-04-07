@@ -1,0 +1,99 @@
+@import '../../../../styles/respond.scss';
+
+.modal {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 970px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.1);
+  padding: 0;
+  overflow: hidden;
+  @include respond-to('md') {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  &_title {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 40px 20px 20px;
+    @include respond-to('md') {
+      padding: 10px 40px 10px 20px;
+    }
+  }
+  &_content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px 20px;
+    @include respond-to('xxs') {
+      padding: 5px;
+    }
+  }
+  &_closeIcon {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    fill: #fff;
+    cursor: pointer;
+    z-index: 100;
+    padding: 20px;
+    width: 60px;
+    height: 70px;
+  }
+  &__borderLess {
+    width: initial;
+
+    @include respond-to('md') {
+      width: 100%;
+    }
+
+    #{$self}_content {
+      padding: 0;
+      @include respond-to('xs') {
+        display: block !important;
+      }
+    }
+
+    #{$self}_closeIcon {
+      fill: #000;
+    }
+  }
+
+  &__order {
+    width: initial;
+    #{$self}_content {
+      padding: 0;
+    }
+  }
+}
+.noFullMobile {
+  @include respond-to('md') {
+    width: 100%;
+    // height: 30%;
+    border-radius: var(--border-radius);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

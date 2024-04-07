@@ -1,0 +1,42 @@
+@import '../../../styles/respond.scss';
+
+.upload {
+  &_label {
+    display: flex;
+    align-items: center;
+    border: 2px dashed var(--btn-primary);
+    width: 100%;
+    padding: 29px 15px;
+    background-color: var(--Border-Text-Feild-B);
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    @include respond-to('sm') {
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+  &_icon {
+    opacity: 0.5;
+  }
+  &_text {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 10px;
+    @include respond-to('sm') {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  &_btn {
+    margin-right: auto;
+    padding: 5px 30px;
+    @include respond-to('sm') {
+      margin-right: 0;
+    }
+  }
+  input {
+    display: none;
+  }
+}
