@@ -47,7 +47,7 @@ const TrainingMenu = () => {
           <Icon
             width="24"
             height="24"
-            className={showWeeks && style.trainingMenu__item__name__closeIcon}
+            className={showWeeks && style.closeIcon}
             src={'down'}
           />
           <span>کلاس اول</span>
