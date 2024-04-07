@@ -30,7 +30,7 @@ const TrainingDashboard = (props) => {
         onClick={() => setIsDasshboardOpen(!isDasshboardOpen)}
       >
         <Icon
-          className={style.trainingDashboard__showButton__icon}
+          className={!isDasshboardOpen && style.closeIcon}
           width="32"
           height="24"
           src={'guillemet'}
