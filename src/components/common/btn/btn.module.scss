@@ -7,12 +7,12 @@
   justify-content: center;
   gap: 9px;
   position: relative;
-  padding: 13px 20px 13px;
   transition: 0.3s;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 28px;
+  font-weight: 500;
+  min-width: 154px;
+  height: 48px;
   cursor: pointer;
   transition: 0.3s;
 
@@ -45,7 +45,14 @@
       background-color: rgba(255, 255, 255, 0);
     }
   }
+  @include respond-to('xs') {
+    min-width: 80px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 10px;
+  }
 }
+
 .LoadingBtn {
   all: unset;
   position: relative;

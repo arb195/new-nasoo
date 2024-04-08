@@ -1,0 +1,27 @@
+@import '../../../styles/respond.scss';
+.customDropDown {
+  &_button {
+    color: inherit;
+    gap: 16px;
+    padding: 0;
+    &_open {
+      transform: rotate(180deg);
+    }
+    @include respond-to('xs') {
+      gap: 8px;
+      &_title {
+        font-size: 12px;
+      }
+    }
+  }
+  &_menu {
+    :global(.MuiPaper-root) {
+      border-radius: 6px;
+      border: 2px solid #4e89ba;
+      box-shadow: none;
+    }
+    :global(.MuiMenu-list) {
+      padding: 0;
+    }
+  }
+}
