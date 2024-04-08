@@ -8,6 +8,7 @@ import Comments from '../../comments/Comments';
 import Icon from '../../common/icon/icon';
 import Link from 'next/link';
 import Btn from '../../common/btn/btn';
+import TestAnnouncement from '../../test/TestAnnouncement';
 
 const notificationList = [
   'هفته‌ی آینده در تاریخ ۰۶/۲۱ کلاس تشکیل نمی‌شود.',
@@ -28,11 +29,11 @@ const TrainingMain = () => {
       <Alert>
         <div className={style.trainingMain__alert__data}>
           <div className={style.trainingMain__alert__data__line}>
-            <Icon width="24" height="24" src={'watch'} />
+            <Icon className={style.trainingMain__icon} src={'watch'} />
             <span>۲۳ ساعت تا شروع کلاس</span>
           </div>
           <div className={style.trainingMain__alert__data__line}>
-            <Icon width="24" height="24" src={'like'} />
+            <Icon className={style.trainingMain__icon} src={'like'} />
             <span>شما برای شرکت در کلاس آماده هستید.</span>
           </div>
         </div>
@@ -56,7 +57,7 @@ const TrainingMain = () => {
             <Btn disabled>ورود به کلاس</Btn>
             <Btn outline={true}>
               کپی لینک
-              <Icon width="24" height="24" src={'copy-link'} disabled />
+              <Icon className={style.trainingMain__icon} src={'copy-link'} disabled />
             </Btn>
           </div>
         </div>
@@ -81,6 +82,7 @@ const TrainingMain = () => {
         type="doc"
         iconSrc="quiz-square"
       />
+      <TestAnnouncement title='آزمون آموزه‌ی طرحواره شکست' />
       <FAQ />
       <Comments
         title="یادداشت شما برای این درس"

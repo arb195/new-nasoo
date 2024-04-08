@@ -1,6 +1,5 @@
 @import '../../../styles/respond.scss';
 .cognitiveForm {
-  position: relative;
   margin-bottom: 20px;
   &_contentWrraper {
     padding: 28px 12px 10px;
@@ -34,32 +33,35 @@
     accent-color: var(--Border-Text-Feild-B);
   }
   &_btn {
-    position: sticky;
-    bottom: 0;
+    // position: sticky;
+    // bottom: 0;
     background-color: #fff;
     padding: 10px;
     box-shadow: 4px 4px 8px rgba(160, 160, 160, 0.25);
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 100%;
-      bottom: 0;
-      width: 50vw;
-      background-color: #fff;
-      display: block;
-      height: 100%;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 100%;
-      bottom: 0;
-      height: 100%;
-      width: 50vw;
-      background-color: #fff;
-      display: block;
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   right: 100%;
+    //   bottom: 0;
+    //   width: 50vw;
+    //   background-color: #fff;
+    //   display: block;
+    //   height: 100%;
+    // }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 100%;
+    //   bottom: 0;
+    //   height: 100%;
+    //   width: 50vw;
+    //   background-color: #fff;
+    //   display: block;
+    // }
   }
+  // @include respond-to('sm'){
+  //   width: 100%;
+  // }
 }

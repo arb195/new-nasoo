@@ -1,3 +1,4 @@
+@import '../../styles/respond.scss';
 .training {
   display: flex;
   min-height: 100vh;
@@ -10,6 +11,11 @@
   &__openDashboard {
     width: 452px;
   }
-  // @include respond-to('xs') {
-  // }
+  @include respond-to('xs') {
+    flex-direction: column;
+    aside{
+      padding: 16px;
+      border-left: none;
+    }
+  }
 }

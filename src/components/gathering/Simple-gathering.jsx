@@ -5,7 +5,6 @@ import Comments from '../comments/Comments';
 import style from './gathering.module.scss';
 import Icon from '@/components/common/icon/icon';
 import { Button } from '@mui/material';
-import GatheringPic from '../../../public/assets/img/gathering.png';
 import Btn from '../common/btn/btn';
 import { NsCol, NsContainer, NsRow } from '../common/grid/grid';
 import ImageItem from '../common/imageItem/imageItem';
@@ -74,7 +73,9 @@ const SimpleGathering = (props) => {
               style[!isCollapse && 'closedPic']
             }`}
           >
-            <ImageItem src={GatheringPic} />
+            <img
+          src={'/assets/img/gathering.png'}
+        />
           </NsCol>
           <NsCol className={style.simpleGathering__main__body__info}>
             <div className={style.simpleGathering__main__body__info__title}>

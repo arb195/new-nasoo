@@ -1,3 +1,4 @@
+@import '@/styles/respond.scss';
 .trainingMain {
   display: flex;
   flex-direction: column;
@@ -27,9 +28,13 @@
           font-size: 14px;
           line-height: 32px;
         }
+        &__moreInfo {
+          font-size: 12px;
+        }
       }
       &__buttons {
         display: flex;
+        align-items: center;
         gap: 16px;
         button {
           font-size: 12px;
@@ -39,6 +44,52 @@
           width: 147px;
         }
       }
+    }
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+  @include respond-to(xs) {
+    gap: 16px;
+    padding: 32px 40px;
+    &__alert {
+      &__data {
+        font-size: 12px;
+        line-height: 22px;
+        &__line {
+          gap: 4px;
+        }
+      }
+
+      &__links {
+        &__line {
+          gap: 16px;
+          margin-bottom: 12px;
+          &__classInfo {
+            gap: 8px;
+            font-size: 10px;
+            line-height: 20px;
+          }
+          &__moreInfo {
+            font-size: 10px;
+          }
+        }
+        &__buttons {
+          gap: 8px;
+          button {
+            font-size: 10px;
+            line-height: 22px;
+            padding: 0;
+            height: 32px;
+            width: 76px;
+          }
+        }
+      }
+    }
+    &__icon {
+      width: 16px;
+      height: 16px;
     }
   }
 }

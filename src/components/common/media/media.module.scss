@@ -1,3 +1,4 @@
+@import '@/styles/respond.scss';
 .media {
   width: 100%;
   background-color: #eff7fe;
@@ -20,6 +21,10 @@
       display: flex;
       gap: 16px;
       align-items: center;
+      &__icon {
+        width: 20px;
+        height: 20px;
+      }
     }
     &__buttons {
       font-size: 16px;
@@ -27,6 +32,39 @@
       gap: 16px;
       a {
         width: 62px;
+      }
+    }
+  }
+  // &__video {
+
+  // }
+  &__audio {
+    width: 100%;
+  }
+  @include respond-to('xs') {
+    padding: 0 16px 16px;
+    &__checkbox {
+      left: 40px;
+      top: 24px;
+      width: 16px;
+      height: 16px;
+    }
+    &__heading {
+      line-height: 22px;
+      &__title {
+        font-size: 12px;
+        gap: 8px;
+        &__icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      &__buttons {
+        font-size: 10px;
+        gap: 8px;
+        a {
+          width: 36px;
+        }
       }
     }
   }

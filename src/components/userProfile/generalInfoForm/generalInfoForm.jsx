@@ -14,28 +14,37 @@ const GeneralInfoForm = () => {
     // router.push('/');
   };
 
-  function dataSelectField(data) {
-    return [
-      {
-        title: 'ایران',
-        icon: {
-          src: 'iran-flag',
-          width: '24px',
-          height: '24px',
-        },
-        value: '+98',
+  const countrySelectField = [
+    {
+      title: 'ایران',
+      icon: {
+        src: 'iran-flag',
+        width: '24px',
+        height: '24px',
       },
-      {
-        title: 'آمریکا',
-        icon: {
-          src: 'iran-flag',
-          width: '24px',
-          height: '24px',
-        },
-        value: '+1',
+      value: '+98',
+    },
+    {
+      title: 'آمریکا',
+      icon: {
+        src: 'iran-flag',
+        width: '24px',
+        height: '24px',
       },
-    ];
-  }
+      value: '+1',
+    },
+  ];
+
+  const sexOptions = [
+    {
+      title: 'مرد',
+      value: 'man',
+    },
+    {
+      title: 'زن',
+      value: 'women',
+    },
+  ];
   return (
     <div className={s.form}>
       <NsContainer className={s.form_container}>
@@ -99,7 +108,7 @@ const GeneralInfoForm = () => {
                   name={'country-code'}
                   label="کد کشور"
                   required={true}
-                  options={dataSelectField()}
+                  options={countrySelectField}
                   FormController={Controller}
                   formControl={control}
                   className={s.form_phoneSelect}
@@ -138,7 +147,7 @@ const GeneralInfoForm = () => {
                 name={'gender'}
                 label="جنس"
                 required={true}
-                options={dataSelectField()}
+                options={sexOptions}
                 className={s.form_select}
                 placeholder="جنس خود را انتخاب کنید."
                 FormController={Controller}

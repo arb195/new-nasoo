@@ -14,11 +14,11 @@ const FAQ = () => {
   return (
     <div className={style.faq}>
       <div className={style.faq_title}>
-        <Icon width="20" height="20" src={'message'} />
+        <Icon width="20" height="20" src={'Q&A'} />
         <p>پرسش و پاسخ</p>
       </div>
       <div className={style.faq_body}>
-        <FaqItem item={questions} />
+        {/* <FaqItem item={questions} /> */}
         <form onSubmit={handleSubmit} className={style.faq_body_newQuestion}>
           <p className={style.faq_body_newQuestion_headline}>سوال شما</p>
           <Input
@@ -37,7 +37,10 @@ const FAQ = () => {
             >
               ارسال
             </Btn>
-            <Link href={'#'} className={style.faq_body_newQuestion_submiting_link}>
+            <Link
+              href={'#'}
+              className={style.faq_body_newQuestion_submiting_link}
+            >
               بیشتر
             </Link>
           </div>

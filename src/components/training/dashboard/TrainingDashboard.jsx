@@ -4,10 +4,9 @@ import Icon from '../../common/icon/icon';
 import TrainingMenu from './TrainingMenu';
 
 const DashboardItems = [
-  { title: 'نقشه راه', iconSrc: 'map' },
-  { title: 'محتوای تکمیلی', iconSrc: 'file' },
-  { title: 'داستان‌های مدرسه', iconSrc: 'message-love' },
-  { title: 'ارزیابی', iconSrc: 'evaluation' },
+  { title: 'کارت یادآوری', iconSrc: 'reminder' },
+  { title: 'چالش‌ها', iconSrc: 'star' },
+  { title: 'پروژه شناختی', iconSrc: 'trophy' },
 ];
 
 const TrainingDashboard = (props) => {
@@ -23,7 +22,7 @@ const TrainingDashboard = (props) => {
   ));
   return (
     <aside className={style.trainingDashboard}>
-      <btn
+      <button
         className={
           style[('trainingDashboard__item', 'trainingDashboard__showButton')]
         }
@@ -36,7 +35,7 @@ const TrainingDashboard = (props) => {
           src={'guillemet'}
         />
         {isDasshboardOpen && <span>مخفی کردن منو</span>}
-      </btn>
+      </button>
 
       {isDasshboardOpen ? (
         <TrainingMenu />

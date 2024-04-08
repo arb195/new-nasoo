@@ -20,7 +20,7 @@ const Comments = ({ title, note, placeholder }) => {
   return (
     <NsContainer className={style.comments}>
       <NsRow className={style.comments_title}>
-        <Icon width="20" height="20" src={'message'} />
+        <Icon width="20" height="20" src={'pen'} />
         <snap> {title}</snap>
       </NsRow>
       <NsRow>{renderComment}</NsRow>

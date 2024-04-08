@@ -9,17 +9,17 @@ const Media = ({ title, dlSrc, type, iconSrc }) => {
       <input type="checkbox" className={style.media__checkbox} />
       <div className={style.media__heading}>
         <div className={style.media__heading__title}>
-          <Icon width="20" height="20" src={iconSrc} />
+          <Icon className={style.media__heading__title__icon} src={iconSrc} />
           <span>{title}</span>
         </div>
         <div className={style.media__heading__buttons}>
           {type === 'doc' && <Link href={'#'}>مشاهده</Link>}
-          {type !== 'video' && <Link href={dlSrc}>دانلود</Link>}
+          {type === 'doc' && <Link href={dlSrc}>دانلود</Link>}
         </div>
       </div>
-      {type === 'audio' && <audio controls src="#"></audio>}
+      {type === 'audio' && <audio controls src="#" className={style.media__audio}></audio>}
       {type === 'video' && (
-        <video controls>
+        <video controls className={style.media__video}>
           <source src={dlSrc} type="video/webm" />{' '}
         </video>
       )}

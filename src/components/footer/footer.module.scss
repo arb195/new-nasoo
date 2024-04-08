@@ -8,14 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--BackGround-Text-Fields);
+    background-color: #4683b6;
     padding: 10px 0 8px;
     z-index: 10;
   }
   &_iconActive {
     display: flex;
     padding: 10px;
-    fill: var(--Key-Primary-Primary);
     background-color: var(--Border-Text-Feild-B);
     border-radius: 50%;
   }

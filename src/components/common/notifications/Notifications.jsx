@@ -6,7 +6,7 @@ const Notifications = ({ notificationList, setShowNotification }) => {
   return (
     <div className={style.notification}>
       <div className={style.notification__heading}>
-        <Icon width="24" height="24" src={'bell'} />
+        <Icon className={style.notification__heading__icon} src={'bell'} />
         <span>اعلان‌ها</span>
       </div>
       <ul className={style.notification__list}>
