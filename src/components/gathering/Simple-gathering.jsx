@@ -29,7 +29,15 @@ const SimpleGathering = (props) => {
     : canSubmit
     ? 'میخواهم در این گردهمایی شرکت کنم'
     : 'این گردهمایی برای شما نیست';
-  const renderedCommentFaq = outDate ? <Comments /> : <FAQ />;
+  const renderedCommentFaq = outDate ? (
+    <Comments
+      title="نظر شرکت‌کنندگان"
+      note={false}
+      placeholder="بازخورد خود را در ارتباط با این گردهمایی اینجا بنویسید."
+    />
+  ) : (
+    <FAQ />
+  );
   return (
     <NsContainer className={style.simpleGathering}>
       <div

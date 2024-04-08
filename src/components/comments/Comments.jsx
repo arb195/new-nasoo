@@ -9,7 +9,7 @@ import Input from '../common/input/input';
 import Link from 'next/link';
 import { NsContainer, NsRow } from '../common/grid/grid';
 const commentItems = ['comment01'];
-const Comments = () => {
+const Comments = ({ title, note, placeholder }) => {
   const { register, handleSubmit } = useForm();
   const [showCommentID, setShowCommentID] = useState(0);
   //   const handleSubmit = {};
@@ -21,7 +21,7 @@ const Comments = () => {
     <NsContainer className={style.comments}>
       <NsRow className={style.comments_title}>
         <Icon width="20" height="20" src={'message'} />
-        <p>نظر شرکت‌کنندگان</p>
+        <snap> {title}</snap>
       </NsRow>
       <NsRow>{renderComment}</NsRow>
       <NsRow className={style.comments_body}>
@@ -35,23 +35,32 @@ const Comments = () => {
             type={'text'}
             textaria={true}
             register={register}
-            placeholder={
-              'بازخورد خود را در ارتباط با این گردهمایی اینجا بنویسید.'
-            }
+            placeholder={placeholder}
           />
           <div className={style.comments_body_newComment_submiting}>
-            <Btn
-              type={'submit'}
-              className={style.comments_body_newComment_submiting_btn}
-            >
-              ارسال
-            </Btn>
-            <Link
-              href={'#'}
-              className={style.comments_body_newComment_submiting_link}
-            >
-              بیشتر
-            </Link>
+            {note ? (
+              <Btn
+                type={'submit'}
+                className={style.comments_body_newComment_submiting_btn}
+              >
+                ذخیره
+              </Btn>
+            ) : (
+              <>
+                <Btn
+                  type={'submit'}
+                  className={style.comments_body_newComment_submiting_btn}
+                >
+                  ارسال
+                </Btn>
+                <Link
+                  href={'#'}
+                  className={style.comments_body_newComment_submiting_link}
+                >
+                  بیشتر
+                </Link>
+              </>
+            )}
           </div>
         </form>
       </NsRow>

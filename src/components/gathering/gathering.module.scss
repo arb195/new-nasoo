@@ -8,6 +8,7 @@
     width: 100%;
     gap: 8px;
     color: #323232;
+
     &__divider {
       content: '';
       height: 2px;
@@ -15,7 +16,12 @@
       width: 100%;
       background-color: #323232;
     }
-    @include respond-to(xs) {
+  }
+  &__alert {
+    font-size: 18px;
+  }
+  @include respond-to(xs) {
+    &__headline {
       &__list {
         width: 180px;
       }

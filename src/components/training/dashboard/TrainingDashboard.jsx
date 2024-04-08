@@ -6,7 +6,7 @@ import TrainingMenu from './TrainingMenu';
 const DashboardItems = [
   { title: 'نقشه راه', iconSrc: 'map' },
   { title: 'محتوای تکمیلی', iconSrc: 'file' },
-  { title: 'داستان‌های مدرسه', iconSrc: 'love-message' },
+  { title: 'داستان‌های مدرسه', iconSrc: 'message-love' },
   { title: 'ارزیابی', iconSrc: 'evaluation' },
 ];
 

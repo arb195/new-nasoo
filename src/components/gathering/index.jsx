@@ -1,11 +1,12 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import CustomDropDown from '../common/CustomDropDown/CustomDropDown';
 import style from './gathering.module.scss';
 import SimpleGathering from './Simple-gathering';
 import { useCookies } from 'react-cookie';
 import AllGathering from '../../api/gathering/AllGathering';
 import { NsContainer, NsRow } from '../common/grid/grid';
+import Alert from '../common/alert/Alert';
 
 const sampleGathering = {
   name: 'gathering',
@@ -22,17 +23,15 @@ const sampleGathering = {
 };
 const listType = ['همه', 'مخصوص من', 'برگزار شده', 'برگزار نشده'];
 const Gathering = () => {
+  const [showAlert, setShowAlert] = useState(true);
   const [cookies] = useCookies();
   AllGathering({ id: cookies?.usersInfo?.UserId })
     .then(({ data }) => {
       console.log(data);
     })
-    .catch((error) => console.log(error.message));
+    .catch(() => setShowAlert(true));
   const renderdGatherings = (
     <NsRow>
-      <SimpleGathering data={sampleGathering} />
-      <SimpleGathering data={sampleGathering} />
-      <SimpleGathering data={sampleGathering} />
       <SimpleGathering data={sampleGathering} />
     </NsRow>
   );
@@ -45,7 +44,16 @@ const Gathering = () => {
           <CustomDropDown>{listType}</CustomDropDown>
         </div>
       </NsRow>
-      {renderdGatherings}
+      {showAlert ? (
+        <Alert>
+          <span className={style.gathering__alert}>
+            در حال حاضر اطلاعاتی گردهمایی در دسترس نیست. برای اطلاعات بیشتر با
+            ما تماس بگیرید.
+          </span>
+        </Alert>
+      ) : (
+        renderdGatherings
+      )}
     </NsContainer>
   );
 };
