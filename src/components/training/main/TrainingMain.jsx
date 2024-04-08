@@ -3,6 +3,11 @@ import style from './trainingMain.module.scss';
 import Notifications from '../../common/notifications/Notifications';
 import Alert from '../../common/alert/Alert';
 import Media from '../../common/media/Media';
+import FAQ from '../../FAQ/faq';
+import Comments from '../../comments/Comments';
+import Icon from '../../common/icon/icon';
+import Link from 'next/link';
+import Btn from '../../common/btn/btn';
 
 const notificationList = [
   'هفته‌ی آینده در تاریخ ۰۶/۲۱ کلاس تشکیل نمی‌شود.',
@@ -20,7 +25,42 @@ const TrainingMain = () => {
           setShowNotification={setShowNotification}
         />
       )}
-      <Alert />
+      <Alert>
+        <div className={style.trainingMain__alert__data}>
+          <div className={style.trainingMain__alert__data__line}>
+            <Icon width="24" height="24" src={'watch'} />
+            <span>۲۳ ساعت تا شروع کلاس</span>
+          </div>
+          <div className={style.trainingMain__alert__data__line}>
+            <Icon width="24" height="24" src={'like'} />
+            <span>شما برای شرکت در کلاس آماده هستید.</span>
+          </div>
+        </div>
+        <div className={style.trainingMain__alert__links}>
+          <div className={style.trainingMain__alert__links__line}>
+            <Link
+              href={'#'}
+              className={style.trainingMain__alert__links__line__classInfo}
+            >
+              <Icon width="16" height="16" src={'more-info'} />
+              <span>روش‌های ورود به کلاس</span>
+            </Link>
+            <Link
+              href={'#'}
+              className={style.trainingMain__alert__links__line__moreInfo}
+            >
+              <span>بیشتر بدانید</span>
+            </Link>
+          </div>
+          <div className={style.trainingMain__alert__links__buttons}>
+            <Btn disabled>ورود به کلاس</Btn>
+            <Btn outline={true}>
+              کپی لینک
+              <Icon width="24" height="24" src={'copy-link'} disabled />
+            </Btn>
+          </div>
+        </div>
+      </Alert>
       <Media title="طرحواره شکست" dlSrc="#" type="doc" iconSrc="book" />
       <Media
         title="محرک‌های طرحواره‌ی شکست"
@@ -40,6 +80,12 @@ const TrainingMain = () => {
         dlSrc="#"
         type="doc"
         iconSrc="quiz-square"
+      />
+      <FAQ />
+      <Comments
+        title="یادداشت شما برای این درس"
+        note={true}
+        placeholder="پیشنهاد میکنیم در زمان مطالعه سوالی پیش اومد بنویسید."
       />
     </div>
   );
