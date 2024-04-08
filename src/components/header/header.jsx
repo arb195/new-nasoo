@@ -27,7 +27,7 @@ const Header = ({ device }) => {
                 <Link href="/personal-meet" className={s.siteHeader_item}>
                   جلسات فردی
                 </Link>
-                <Link href="#" className={s.siteHeader_item}>
+                <Link href="/gathering" className={s.siteHeader_item}>
                   گردهمایی
                 </Link>
               </div>
