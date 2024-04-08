@@ -1,0 +1,92 @@
+.trainingDashboard {
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    height: 36px;
+    color: #4683b6;
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+    span {
+      line-height: 36px;
+      font-size: 20px;
+    }
+  }
+  &__showButton {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    height: 36px;
+    font-size: 14px;
+    color: #172c3d;
+  }
+  &__trainingMenuButton {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e6e9;
+    height: 36px;
+  }
+}
+.trainingMenu {
+  border-bottom: 1px solid #e5e6e9;
+  padding-bottom: 40px;
+  margin-bottom: 32px;
+  &__item {
+    &__name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      width: 100%;
+
+      &__line {
+        width: 100%;
+        height: 2px;
+        background-color: #172c3d;
+      }
+      span {
+        min-width: fit-content;
+      }
+    }
+    &__week {
+      width: 100%;
+      height: 87px;
+      padding: 16px;
+      margin: 16px auto;
+      border-radius: 8px;
+      border: 1px solid #bedffa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__input {
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          input {
+            margin-left: 8px;
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
+    }
+    &__activeWeek {
+      background-color: #fef5e5;
+    }
+  }
+}
+.closeIcon {
+  transform: rotate(180deg);
+}

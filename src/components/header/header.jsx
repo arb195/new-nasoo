@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { NsContainer, NsRow, NsCol } from '@/components/common/grid/grid';
 import { useCheckBreakpoint } from '@/hook/useMediaQuery';
 
-const Header = ({device}) => {
+const Header = ({ device }) => {
   const [checkRes] = useCheckBreakpoint(device);
   return (
     <header className={s.siteHeader}>
@@ -21,7 +21,7 @@ const Header = ({device}) => {
                 src="header-logo"
               />
               <div className={s.siteHeader_items}>
-                <Link href="#" className={s.siteHeader_item}>
+                <Link href="/training" className={s.siteHeader_item}>
                   آموزش
                 </Link>
                 <Link href="#" className={s.siteHeader_item}>

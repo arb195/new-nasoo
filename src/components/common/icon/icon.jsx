@@ -1,13 +1,13 @@
 import { memo } from 'react';
 
-const Icon = ({ src, ...other }) => {
+const Icon = ({ src, className, ...other }) => {
   if (src == undefined) {
     return;
   }
   const srcSet = src?.split(' ');
 
   return (
-    <svg {...other}>
+    <svg className={className} {...other}>
       <use xlinkHref={`#${srcSet[0]}`} />
     </svg>
   );
