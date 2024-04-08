@@ -1,0 +1,39 @@
+.notification {
+    width: 100%;
+    background-color: #eff7fe;
+    border-radius: 8px;
+    padding: 32px 24px;
+    &__heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      span {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+    &__list {
+      font-size: 18px;
+      line-height: 32px;
+      margin-right: 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    &__buttons {
+      height: 48px;
+      display: flex;
+      gap: 16px;
+      justify-content: flex-end;
+      button {
+        width: 155px;
+      }
+      &__close {
+        background: none;
+        border: none;
+        color: #191307;
+      }
+    }
+  }

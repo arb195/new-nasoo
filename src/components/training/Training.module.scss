@@ -1,0 +1,15 @@
+.training {
+  display: flex;
+  min-height: 100vh;
+  padding: 0;
+
+  aside {
+    padding: 48px 32px;
+    border-left: 2px solid #cbcdd2;
+  }
+  &__openDashboard {
+    width: 452px;
+  }
+  // @include respond-to('xs') {
+  // }
+}

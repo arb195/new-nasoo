@@ -1,0 +1,26 @@
+.searchBox {
+  width: 340px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbcdd2;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+
+  input {
+    background: none;
+    border: none;
+    width: inherit;
+    height: inherit;
+  }
+  button {
+    background: none;
+    border: none;
+    margin-left: 8px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

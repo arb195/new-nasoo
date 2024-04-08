@@ -1,0 +1,44 @@
+.trainingMain {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  padding: 48px 52px;
+  &__alert {
+    &__data {
+      font-size: 20px;
+      line-height: 36px;
+      &__line {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+    &__links {
+      &__line {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        margin-bottom: 12px;
+        &__classInfo {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 14px;
+          line-height: 32px;
+        }
+      }
+      &__buttons {
+        display: flex;
+        gap: 16px;
+        button {
+          font-size: 12px;
+          line-height: 22px;
+          padding: 0;
+          height: 40px;
+          width: 147px;
+        }
+      }
+    }
+  }
+}

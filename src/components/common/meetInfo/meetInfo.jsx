@@ -55,7 +55,7 @@ const MeetInfo = () => {
       </ul>
       <ImageItem
         className={s.meetInfo_img}
-        src={'/assets/img/meet-info.png'}
+        src={'/assets/img/alert.png'}
         alt={'جلسه فردی'}
         width={208}
         height={208}
