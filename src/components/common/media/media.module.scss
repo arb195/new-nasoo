@@ -1,0 +1,33 @@
+.media {
+  width: 100%;
+  background-color: #eff7fe;
+  border-radius: 8px;
+  padding: 16px 24px;
+  &__checkbox {
+    position: relative;
+    left: 56px;
+    top: 32px;
+    width: 20px;
+    height: 20px;
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 36px;
+    &__title {
+      font-size: 20px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    &__buttons {
+      font-size: 16px;
+      display: flex;
+      gap: 16px;
+      a {
+        width: 62px;
+      }
+    }
+  }
+}
