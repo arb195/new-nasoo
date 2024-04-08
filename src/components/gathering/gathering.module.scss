@@ -1,6 +1,7 @@
 @import '../../styles/respond.scss';
 .gathering {
   padding: 16px;
+  min-height: 100vh;
   &__headline {
     display: flex;
     align-items: center;
@@ -21,10 +22,8 @@
     font-size: 18px;
   }
   @include respond-to(xs) {
-    &__headline {
-      &__list {
-        width: 180px;
-      }
+    &__alert {
+      font-size: 12px;
     }
   }
 }

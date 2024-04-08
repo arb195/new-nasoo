@@ -12,16 +12,19 @@ const Footer = ({ device = null }) => {
       {checkRes(['xxs', 'xs', 'sm']) ? (
         <div className={s.footer_mobile}>
           <Link href="#" className={s.footer_icon}>
-            <Icon width="32" height="32" src="profile-circle" />
+            <Icon width="32" height="32" src="setting-square" />
           </Link>
           <Link href="#" className={s.footer_icon}>
-            <Icon width="32" height="32" src="notification" />
-          </Link>
-          <Link href="#" className={s.footer_icon}>
-            <Icon width="32" height="32" src="like" />
-          </Link>
-          <Link href="#" className={`${s.footer_icon} ${s.footer_iconActive}`}>
             <Icon width="32" height="32" src="message" />
+          </Link>
+          <Link href="#" className={s.footer_icon}>
+            <Icon width="32" height="32" src="evaluation" />
+          </Link>
+          <Link href="#" className={s.footer_icon}>
+            <Icon width="32" height="32" src="bell" />
+          </Link>
+          <Link href="/profile" className={s.footer_icon}>
+            <Icon width="32" height="32" src="profile-circle" />
           </Link>
         </div>
       ) : (

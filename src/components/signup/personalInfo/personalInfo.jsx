@@ -9,22 +9,16 @@ import SweetAlert2 from 'react-sweetalert2';
 import { useState } from 'react';
 
 const PersonalInfo = ({ register, controller, control }) => {
-  function dataSelectField(data) {
-    return [
-      {
-        title: 'مرد',
-        value: 'man',
-      },
-      {
-        title: 'زن',
-        value: 'women',
-      },
-      {
-        title: 'ترجیه میدهم نگویم',
-        value: 'nogender',
-      },
-    ];
-  }
+  const sexOptions = [
+    {
+      title: 'مرد',
+      value: 'man',
+    },
+    {
+      title: 'زن',
+      value: 'women',
+    },
+  ];
 
   const [swalProps, setSwalProps] = useState({});
 
@@ -88,7 +82,7 @@ const PersonalInfo = ({ register, controller, control }) => {
         <SelectField
           name={'gender'}
           label="جنس"
-          options={dataSelectField()}
+          options={sexOptions}
           className={s.personalInfo_select}
           placeholder="جنس خود را انتخاب کنید."
           FormController={controller}

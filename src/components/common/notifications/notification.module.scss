@@ -1,39 +1,71 @@
+@import '@/styles/respond.scss';
 .notification {
-    width: 100%;
-    background-color: #eff7fe;
-    border-radius: 8px;
-    padding: 32px 24px;
+  width: 100%;
+  background-color: #eff7fe;
+  border-radius: 8px;
+  padding: 32px 24px;
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+    span {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+  &__list {
+    font-size: 18px;
+    line-height: 32px;
+    margin-right: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  &__buttons {
+    height: 48px;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    button {
+      width: 155px;
+    }
+    &__close {
+      background: none;
+      border: none;
+      color: #191307;
+    }
+  }
+  @include respond-to('xs') {
+    padding: 20px 18px;
     &__heading {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
+      line-height: 22px;
+      margin-bottom: 4px;
+      &__icon {
+        width: 16px;
+        height: 16px;
+      }
       span {
-        font-size: 20px;
-        line-height: 36px;
+        font-size: 12px;
       }
     }
     &__list {
-      font-size: 18px;
-      line-height: 32px;
-      margin-right: 64px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 24px;
+      font-size: 10px;
+      line-height: 18px;
+      margin-right: 20px;
+      gap: 4px;
     }
     &__buttons {
-      height: 48px;
-      display: flex;
-      gap: 16px;
-      justify-content: flex-end;
+      height: 32px;
+
       button {
-        width: 155px;
-      }
-      &__close {
-        background: none;
-        border: none;
-        color: #191307;
+        width: 76px;
       }
     }
   }
+}

@@ -1,4 +1,8 @@
 .trainingDashboard {
+  button{
+    background: none;
+    border: none;
+  }
   &__item {
     display: flex;
     align-items: center;
@@ -6,6 +10,7 @@
     margin-bottom: 16px;
     height: 36px;
     color: #4683b6;
+    
     &__icon {
       width: 32px;
       height: 32px;

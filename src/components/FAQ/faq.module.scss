@@ -43,14 +43,16 @@
   @include respond-to('xs') {
     padding: 16px;
     &_title {
-      font-size: 16px;
+      font-size: 12px;
+      line-height: 22px;
       gap: 8px;
     }
     &_body {
       margin-right: 28px;
       &_newQuestion {
         &_headline {
-          font-size: 14px;
+          font-size: 12px;
+          line-height: 22px;
         }
         &_submiting {
           &_link {

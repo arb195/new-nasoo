@@ -15,10 +15,20 @@
     margin-bottom: 8px;
   }
   &__image {
-    width: 265px;
+    width: 300px;
     height: 265px;
   }
   @include respond-to(xs) {
-    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    &__contents {
+      width: 100%;
+    }
+    &__image {
+      width: 88px;
+      height: 88px;
+    }
   }
 }

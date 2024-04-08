@@ -75,4 +75,13 @@
     font-size: 12px;
     z-index: 3;
   }
+  @include respond-to('xs') {
+    ::placeholder {
+      font-size: 10px;
+    }
+    &_field {
+      padding: 0 8px;
+      height: 52px;
+    }
+  }
 }

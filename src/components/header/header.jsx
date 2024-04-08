@@ -40,7 +40,7 @@ const Header = ({ device }) => {
                   <Icon width="32" height="32" src="message" />
                 </Link>
                 <Link href="#" className={s.siteHeader_icon}>
-                  <Icon width="32" height="32" src="like" />
+                  <Icon width="32" height="32" src="evaluation" />
                 </Link>
                 <Link href="#" className={s.siteHeader_icon}>
                   <Icon width="32" height="32" src="notification" />

@@ -1,0 +1,91 @@
+@import '@/styles/respond.scss';
+.testAnnouncement {
+  width: 100%;
+  background-color: #fafdff;
+  border: 1px solid #4683b6;
+  border-radius: 8px;
+  padding: 36px 24px;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    &__data {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &__heading {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        line-height: 36px;
+        &__icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      &__midline {
+        font-size: 18px;
+        line-height: 32px;
+        margin-right: 36px;
+      }
+      &__sugests {
+        margin-right: 36px;
+        font-size: 12px;
+        line-height: 22px;
+        ul {
+          margin-right: 16px;
+          li {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    &__image {
+      width: 300px;
+      height: 265px;
+    }
+  }
+  &__button {
+    margin: 0 auto;
+    width: 600px;
+  }
+  @include respond-to('xs') {
+    padding: 16px;
+    &__content {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-bottom: 16px;
+      &__data {
+        &__heading {
+          gap: 8px;
+          font-size: 12px;
+          line-height: 22px;
+        }
+        &__midline {
+          font-size: 12px;
+          line-height: 22px;
+          margin-right: 8px;
+        }
+        &__sugests {
+          font-size: 10px;
+          line-height: 18px;
+          margin-right: 8px;
+          ul{
+              li{
+                margin-top: 4px;
+              }
+          }
+        }
+      }
+      &__image {
+        width: 88px;
+        height: 88px;
+      }
+    }
+    &__button {
+      width: 100%;
+    }
+  }
+}
