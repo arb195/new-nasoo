@@ -5,7 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Icon from '@/components/common/icon/icon';
 
-const CustomAccordion = ({ title = '', grow = flase, children }) => {
+const CustomAccordion = ({ title = '', grow = false, children }) => {
   return (
     <div className={s.accordion}>
       <Accordion>

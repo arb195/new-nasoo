@@ -6,7 +6,7 @@ const Radio = React.forwardRef(
     id,
     parentClass,
     modifier,
-    defaultValue = '',
+    val = '',
     name,
     className,
     label,
@@ -29,10 +29,12 @@ const Radio = React.forwardRef(
           {topDesc != null ? (
             <span className={s.radio_topDesc}>{topDesc}</span>
           ) : null}
+
           <input
-            {...register(name, { required, value: defaultValue })}
+            {...register(name, { required })}
             className={`${s.radio_field}`}
-            type={'radio'}
+            type="radio"
+            value={val}
             id={id}
           />
           <label htmlFor={id}>{htmllabel}</label>

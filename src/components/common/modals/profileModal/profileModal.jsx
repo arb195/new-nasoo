@@ -53,7 +53,7 @@ const ProfileModal = ({ title, data }) => {
   const slidesGenerate = (dataSlide) => {
     return dataSlide?.map((item, index) => {
       return (
-        <div>
+        <div key={index}>
           <ImageItem
             className={s.profileModal_sliderImg}
             src={item?.img?.url}

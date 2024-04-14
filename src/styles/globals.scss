@@ -175,6 +175,9 @@ body {
   font-weight: 400;
   line-height: 28px;
   color: var(--Body-Text-Darkest, #0c0d0e);
+  @include respond-to('sm') {
+    font-size: 14px;
+  }
 }
 .input-bottom-desc {
   font-size: 16px;
@@ -182,6 +185,9 @@ body {
   font-weight: 500;
   line-height: 28px;
   color: var(--Body-Text-Regular, #7c818f);
+  @include respond-to('sm') {
+    font-size: 14px;
+  }
 }
 
 .err-input {

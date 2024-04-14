@@ -7,4 +7,4 @@ export const AllJalaseFardis = (params) => {
     Id: params,
   });
 };
-export const OTPCODE = () => `${API_URL}/Auth/GetTempCodeForUser`;
+// export const OTPCODE = () => `${API_URL}/Auth/GetTempCodeForUser`;
