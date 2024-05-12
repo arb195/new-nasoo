@@ -1,0 +1,116 @@
+@import '../../../styles/respond.scss';
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  color: #6e6e6e;
+  text-align: center;
+  &_caption{
+    display: none;
+  }
+  &_pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+    button {
+      all: unset;
+      border-radius: 5px;
+      border: 1px solid var(--primary-red);
+      box-shadow: var(--main-shadow);
+      padding: 3px 7px;
+      cursor: pointer;
+    }
+    strong {
+      border: 1px solid var(--primary-red);
+      box-shadow: var(--main-shadow);
+      padding: 3px 7px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.priceCellVal {
+  position: relative;
+  font-weight: 700;
+  line-height: 15px;
+  font-size: 14px;
+  direction: rtl;
+  &_empty {
+    font-size: 12px;
+  }
+  &:hover {
+    .popover {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0) scale(1);
+    }
+  }
+}
+.iconAngleUp {
+  fill: #298f29;
+}
+.iconAngleDown {
+  fill: #e92638;
+}
+
+.popover {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translate(-50%, 0) scale(0);
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  background: #3c5059;
+  color: #ffff;
+  white-space: nowrap;
+  padding: 5px 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  pointer-events: none;
+  font-size: 15px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #3c5059;
+  }
+}
+
+@include respond-to('md') {
+  .actions {
+    padding: 4px 5px 4px 1px !important;
+    // margin-right: auto;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    i {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+    }
+  }
+  .tax {
+    display: block;
+    font-size: 12px;
+    background-color: #f5f5f5;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+.notFindData {
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0;
+}

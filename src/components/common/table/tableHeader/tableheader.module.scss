@@ -1,0 +1,32 @@
+@import '../../../../styles/respond.scss';
+
+.tHead {
+  background-color: #eaf2f9;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  th {
+    font-weight: 200 !important;
+    padding: 10px 0;
+    svg {
+      fill: #6e6e6e;
+      margin-right: 3px;
+    }
+  }
+  &_priceTh {
+    span {
+      font-size: 11px;
+      margin-right: 3px;
+      i {
+        font-style: normal;
+      }
+      @include respond-to('md') {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @include respond-to('md') {
+      min-width: 120px;
+    }
+  }
+}

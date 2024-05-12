@@ -1,0 +1,40 @@
+@import '../../../../styles/respond.scss';
+
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    color: #414141;
+    fill: #414141;
+  }
+  :global {
+    .current {
+      color: var(--white);
+      background-color: var(--primary-red);
+    }
+    .disable {
+      box-shadow: none;
+      opacity: 0.4;
+      cursor: no-drop;
+    }
+  }
+}
